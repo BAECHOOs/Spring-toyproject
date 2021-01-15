@@ -1,0 +1,145 @@
+/* layout */
+
+#wrap {}
+
+#header {
+    height: 89px;
+    border: solid 0.3em white;
+    /* border-bottom: #333333; */
+    border-bottom-color: #EBEBEB;
+}
+
+#banner {
+    height: 550px;
+    background-color: #ef9a9a;
+}
+
+#sbanner {
+    height: 228px;
+    background-color: #e57373;
+}
+
+#select {
+    height: 489px;
+    background-color: #ef5350;
+}
+
+#infor {
+    height: 515px;
+    background-color: #f44336;
+}
+
+#ad {
+    height: 451px;
+    background-color: #e53935;
+}
+
+#blog {
+    height: 1000px;
+    background-color: #d32f2f;
+}
+
+#site {
+    height: 500px;
+    background-color: #c62828;
+}
+
+#footer {
+    height: 100px;
+    background-color: #EEEEEE;
+    
+}
+
+/* container */
+
+.container {
+    width: 1180px;
+    height: inherit;
+    margin: 0 auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+/* Header */
+
+.header {
+    overflow: hidden;
+}
+
+.header h1 {
+    float: left;
+    padding-top: 24px;
+    padding-right: 30px;
+}
+
+.header .gnb {
+    float: left;
+}
+
+.header .gnb li {
+    display: inline;
+}
+
+
+.header .gnb li a {
+    display: inline-block;
+    font-size: 18px;
+    padding: 32px 12px;
+}
+
+.header .quick {
+    float: right;
+}
+
+.header .quick li {
+    display: inline;
+    position: relative;
+}
+
+.header .quick li:before {
+    content: '';
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+    position: absolute;
+    right: 0;
+    top: 1px;
+}
+
+.header .quick li:last-child:before {
+    width: 0;
+    height: 0;
+}
+
+.header .quick li a {
+    display: inline-block;
+    font-size: 14px;
+    padding: 34px 11px 34px 8px;
+    color: #676767;
+}
+
+.header a:hover {
+    color: #1d7abd;
+}
+
+#footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.logo{
+    padding-top: 20px;
+}
+
+.main-part{
+    background-color: #EEE;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:100px;
+    max-width: 800px;
+    height:300px;
+    padding: 3rem;
+
+}
