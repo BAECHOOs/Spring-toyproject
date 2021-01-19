@@ -1,0 +1,99 @@
+#result {
+  background: #f8f9fa;
+  padding: 30px 0 40px 0;
+}
+
+#result .result-container {
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+#result .result-container .articles-wrap {
+  padding: 0 40px;
+}
+
+#result .result-container .articles-wrap .mobile-article-hr-border {
+  display: none;
+}
+
+#result .result-container .articles-wrap a {
+  display: block;
+  text-decoration: none;
+  color: #212529;
+}
+
+#result .result-container .articles-wrap .article-kind {
+  font-weight: 600;
+  color: #212529;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+#result .result-container .articles-wrap .local-article-kind {
+  margin-bottom: 0;
+}
+
+#result .result-container .articles-wrap .article-title {
+  display: block;
+  font-weight: 600;
+  color: #212529;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#result .result-container .articles-wrap .article-region-name {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 6px;
+  color: #868e96;
+}
+
+#result .result-container .articles-wrap .article-price {
+  font-weight: 600;
+  color: #ff8a3d;
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 6px;
+}
+
+#result .result-container .articles-wrap .article-price.blank-price {
+  color: #212529;
+}
+
+#result .result-container .articles-wrap .flat-card {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  width: 217px;
+  margin-right: 34px;
+  margin-bottom: 40px;
+}
+
+#result .result-container .articles-wrap .flat-card .card-photo {
+  height: 160px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+#result .result-container .articles-wrap .flat-card .card-photo img {
+  width: 100%;
+  display: block;
+  transform: translate(0, -13%);
+}
+
+#result .result-container .articles-wrap .flat-card:nth-child(3n-2) {
+  margin-right: 0;
+}
+
+#result .result-container .articles-wrap .flea-market-article .article-content {
+  display: none;
+}
