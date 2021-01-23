@@ -2,8 +2,9 @@
 
 <br>
 
-*[적당한 로고]* 
-
+<div align="center">
+   <img src="https://user-images.githubusercontent.com/41130448/105579921-b8cbaf00-5dcc-11eb-8655-2f09bf64ede9.png" width="40%"></img>
+</div>
 
 
 <br><br>
