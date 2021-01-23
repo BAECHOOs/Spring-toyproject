@@ -1,4 +1,4 @@
-# 📢 *배추마켓: Springboot와 AWS를 활용한 중고거래 사이트*
+# 📢 배추마켓: Springboot와 AWS를 활용한 중고거래 사이트
 
 <br>
 
