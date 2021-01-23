@@ -18,7 +18,9 @@
 
 
 
-3. 데이터 베이스는 MySQL
+3. 데이터 베이스는 MySQL를, 연동은 JPA로 합니다.
+
+![image](https://user-images.githubusercontent.com/42775225/105576235-c37a4a00-5db4-11eb-9e12-17869f4531fb.png)
 
 
 
