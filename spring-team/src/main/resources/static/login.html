@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="publisher">
+    <meta name="description" content="Spring으로 백엔드 시작하기">
+    <meta name="keywords" content="Spring, 백엔드">
+    <title>Spring</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header">
+                    <a href="index.html"><img class="logo" src="img/logo1.PNG" alt="우리로고" ></a>
+                    <ul class="quick">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="default"></div>
+        </main>
+    </div>
+    <footer id="footer">
+        <h3 class="ir"></h3>
+        <div class="container">footer</div>
+    </footer>
+
+    <div class="login">
+        <form action="">
+            <div class="login__field">
+                <label for="username" class="login__label">Username</label>
+                <input type="text" name="username" class="login__input" />
+            </div>
+            <div class="login__field">
+                <label for="password" class="login__label">Password</label>
+                <input type="password" name="password" class="login__input" />
+            </div>
+            <div class="login__actions">
+                <div class="login__submit">
+                    <button class="button" type="submit">Login</button>
+                </div>
+                <label class="login__rememberMe" for="remember_me">
+                    <input type="hidden" name="remember_me" value="no" />
+                    <input type="checkbox" name="remember_me" value="yes" id="remember_me" />
+                    Remember me
+                </label>
+                <a class="login__forgotPasswordLink" href="#">Forgot Your Password?</a>
+            </div>
+        </form>
+    </div>    
+
+
+</body>
+
+</html>

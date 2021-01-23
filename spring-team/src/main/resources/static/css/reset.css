@@ -1,0 +1,69 @@
+/*reset css*/
+
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+/* 여백 초기화 */
+body,
+div,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+textarea,
+p,
+select,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/* 폰트초기화 */
+body,
+input,
+textarea,
+select,
+button,
+table {
+    font-family: 'NanumSquare', '맑은 고딕', 'Apple SD Gothic Neo', '돋움', dotum, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* 리스트 스타일 초기화 */
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+/* a링크 초기화 */
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* ir 효과 */
+
+.ir {
+    width: 0;
+    height: 0;
+    font-style: 0;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
