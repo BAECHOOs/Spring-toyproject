@@ -6,7 +6,7 @@
 
 
 
-일단 2020년 10월부터 기본브랜치를 master가 아닌, main으로 변경되었습니다.
+일단 2020년 10월부터 기본브랜치가 master가 아닌, main으로 변경되었습니다.
 
 (다시말해, 새로운 레파지토리를 만들면 기존에 익숙했던 master라는 이름이 아니라, main이라는 이름을 보게 됩니다.)
 
@@ -46,7 +46,7 @@ git config --global alias.st status
 
 **git status 길게 안 적어도, git st 로 동일한 결과를 얻을 수 있습니다.**
 
-
+<br>
 
 
 
@@ -65,6 +65,7 @@ git config --global alias.st status
 
 ![image](https://user-images.githubusercontent.com/42775225/105865403-3fcf9000-6036-11eb-8ea9-9c45677e728e.png)
 
+source: https://backlog.com/git-tutorial/kr/stepup/stepup1_1.html
 
 
 
@@ -73,7 +74,7 @@ git config --global alias.st status
 
 ### [ 리더 수행 순서 ]
 
-1. 팀원들을 프로젝트의 collaborator로  초대합니다.
+1. 팀원들을 프로젝트의 collaborator로 초대합니다.
 
    : settings -> manage access -> invite a collaborator 
 
