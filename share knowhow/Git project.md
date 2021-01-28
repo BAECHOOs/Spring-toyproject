@@ -1,6 +1,9 @@
 # Git project
 
-git project 는 동료와 협업할 때, 이슈를 등록해서 프로젝트의 진행 상황을 칸반 보드의 형태로 확인할 수 있습니다.
+git project 는 동료와 협업할 때, 이슈를 등록해서 프로젝트의 진행 상황을 칸반 보드의 형태로 확인할 수 있습니다. 기본적으로, collaborator를 초대해서 작업한다고 가정합니다.
+(pull request 방법은 아래 링크를 참고해주세요.)
+
+cf) <a href="./Github for collaboration.md"> Pull request 방법 </a>
 
 
 
