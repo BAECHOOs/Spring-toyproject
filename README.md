@@ -11,7 +11,6 @@
 
 ## 🙋‍♂️ Spring을 함께 공부하고자 모인 사람들
 
-- <a href="https://github.com/Barise" target="_blank">Barise님</a> 
 - <a href="https://github.com/mingdyuo" target="_blank">mingdyuo 님</a> 
 - <a href="https://github.com/HYEEWON " target="_blank">HYEEWON 님</a> 
 - <a href="https://github.com/jiyunYun" target="_blank">jiyunYun님</a> 
