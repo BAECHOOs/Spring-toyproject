@@ -130,7 +130,10 @@
 }
 
 .logo{
-    padding-top: 20px;
+    padding-top: 10px;
+    max-width: 215px;
+    max-height: 70px;
+
 }
 
 .main-part{
