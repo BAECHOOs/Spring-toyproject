@@ -1,4 +1,4 @@
-package toyproject.springteam;
+package toyproject.springteam.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
