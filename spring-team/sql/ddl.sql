@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `baechoo`.`Product` (
   `update_date` TIMESTAMP NOT NULL,
   `views` INT NOT NULL DEFAULT 0,
   `on_sale`	BOOLEAN	NOT NULL,
-  `likes`	INT	NULL,
+  `like_count`	INT	NULL,
   PRIMARY KEY (`product_id`, `user_id`),
   UNIQUE INDEX `product_id_UNIQUE` (`product_id` ASC) VISIBLE,
   INDEX `user_id_idx` (`user_id` ASC) VISIBLE,
