@@ -14,7 +14,7 @@
 * [참고 사이트](https://withcoding.com/36)와 동일한 과정으로 진행합니다.
 * DB의 1번째 버전입니다.
 
-![DBversion1](https://user-images.githubusercontent.com/38900338/106924329-5078b800-6752-11eb-854a-09278c7facd0.JPG)
+![schema](https://user-images.githubusercontent.com/38900338/107044261-65635300-6807-11eb-9035-2a9b72e7adff.JPG)
 ### 1. Root 권한으로 접속(사이트 참고)
 ### 2. 스키마 생성
 * 스키마와 DB 사용자를 생성하는 부분에서 명칭 통일을 위해 아래의 캡처 사진과 동일하게 진행해주세요.
