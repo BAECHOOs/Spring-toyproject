@@ -25,4 +25,6 @@ public class LikeService {
                         new IllegalArgumentException("해당 상품이 존재하지 않습니다."));
         likeRepository.delete(like);
     }
+
+
 }
