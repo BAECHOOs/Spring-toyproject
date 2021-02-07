@@ -15,8 +15,14 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// lombok for getter, setter
+	implementation 'org.projectlombok:lombok'
+	annotationProcessor('org.projectlombok:lombok')
+	testAnnotationProcessor('org.projectlombok:lombok')
+	// jpa
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// mysql
 	compile 'mysql:mysql-connector-java'
 }
 
