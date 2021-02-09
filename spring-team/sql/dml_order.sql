@@ -1,0 +1,3 @@
+-- Insert into Order (order_id, user_id, product_id) values(0, 2, 2);
+-- Insert into Order (order_id, user_id, product_id) values(0, 8, 3);
+-- Insert into Order (order_id, user_id, product_id) values(0, 9, 1);
