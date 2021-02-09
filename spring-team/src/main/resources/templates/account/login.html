@@ -22,15 +22,16 @@
 <div th:replace="fragments/headerbar :: headerbar" />
 <div class="container">
     <main class="text-center">
-        <div th:if="${param.error}">
-            Invalid username and password.
-        </div>
-        <div th:if="${param.logout}">
-            You have been logged out.
-        </div>
         <form class="form-signin" th:action="@{/account/login}" method="post">
             <img class="mb-4" src="/img/logo3.PNG" alt="" width="180" height="57">
 <!--            <h1 class="h3 mb-3 fw-normal">로그인</h1>-->
+            <div th:if="${param.error}" class="alert alert-danger" role="alert">
+                아이디 혹은 비밀번호가 일치하지 않습니다.
+            </div>
+            <div th:if="${param.logout}" class="alert alert-primary" role="alert">
+                로그아웃 되었습니다.
+            </div>
+
             <label for="inputEmail" class="visually-hidden">email</label>
             <input type="email" id="inputEmail" name="email" class="form-control" placeholder="이메일" required autofocus>
             <label for="inputPassword" class="visually-hidden">password</label>
