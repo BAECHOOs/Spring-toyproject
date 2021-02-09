@@ -2,12 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header" />
 <body>
-    <div th:replace="fragments/layout :: layout" />
+    <div th:replace="fragments/headerbar :: headerbar" />
 
-    <main>
+    <main class="container">
         <span>
             <h1>배추마켓이니까</h1>
         </span>
     </main>
+    <div th:replace="fragments/footer :: footer" />
 </body>
 </html>
