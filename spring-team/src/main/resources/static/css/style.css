@@ -46,7 +46,7 @@
 
 #footer {
     height: 100px;
-    background-color: #EEEEEE;
+    background-color: black;
     
 }
 
@@ -137,7 +137,7 @@
 }
 
 .main-part{
-    background-color: #EEE;
+    background-color: black;
     margin-left: auto;
     margin-right: auto;
     margin-top:100px;
@@ -169,3 +169,10 @@
     margin: auto;
 }
 
+input[type=password] {
+    font-family: "Bell MT";
+
+/*&::placeholder {*/
+/*     font-family: "NanumSquare";*/
+/* }*/
+}
