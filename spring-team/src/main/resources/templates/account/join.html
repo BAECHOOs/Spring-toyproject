@@ -1,65 +1,48 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:fragment="header">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="publisher">
-    <meta name="description" content="Spring으로 백엔드 시작하기">
-    <meta name="keywords" content="Spring, 백엔드">
-    <title>Spring</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <meta name="description" content="Spring으로 백엔드 시작하기" />
+    <meta name="keywords" content="Spring, 백엔드" />
+    <title>Baechoo Market</title>
+
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/signin.css}" rel="stylesheet">
 </head>
 
 <body>
-    <div id="wrap">
-        <header id="header">
-            <div class="container">
-                <div class="header">
-                    <a href="index.html"><img class="logo" src="img/logo1.PNG" alt="우리로고" ></a>
-                    <ul class="quick">
-                        <li><a href="login.html">로그인</a></li>
-                        <li><a href="join.html">회원가입</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="default"></div>
-        </main>
-    </div>
-    <footer id="footer">
-        <h3 class="ir"></h3>
-        <div class="container">footer</div>
-    </footer>
+<div th:replace="fragments/headerbar :: headerbar" />
+<div class="container">
+    <main class="text-center">
+        <form class="form-signin" th:action="@{/account/join}" method="post">
+            <img class="mb-4" src="/img/logo3.PNG" alt="" width="180" height="57">
+            <!--            <h1 class="h3 mb-3 fw-normal">로그인</h1>-->
+            <h1 class="h3 mb-3 font-weight-normal">회원가입</h1>
+            <label for="nickname" class="visually-hidden">nickname</label>
+            <input type="text" id="nickname" name="nickname" class="form-control" placeholder="닉네임" required autofocus>
 
-    <form class="login">
-        <div class="login__field">
-            <input action="#" name="name" placeholder="이름" required=true />
-        </div>
-
-        <div class="login__field">
-            <input action="#" name="email" placeholder="이메일" required=true />
-        </div>
-        
-        <div class="login__field">
-            <input action="#" name="password" placeholder="패스워드" required=true />
-        </div>
-        
-        <div class="login__field">
-            <input action="#" name="password2" placeholder="패스워드 확인" required=true />
-        </div>
-        
-        <div class="login__field">
-            <input type="submit", value="로그인" />
-        </div>
-        
-
-    </form>
-
+            <label for="inputEmail" class="visually-hidden">email</label>
+            <input type="email" id="inputEmail" name="email" class="form-control" placeholder="이메일" required autofocus>
+            <label for="inputPassword" class="visually-hidden">password</label>
+            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="패스워드" required>
+            <!--            <div class="checkbox mb-3">-->
+            <!--                <label>-->
+            <!--                    <input type="checkbox" value="remember-me"> Remember me-->
+            <!--                </label>-->
+            <!--            </div>-->
+            <button class="w-100 btn btn-lg btn-primary" type="submit">회원가입</button>
+            <p class="mt-5 mb-3 text-muted">&copy;2021</p>
+        </form>
+    </main>
+</div>
+<div th:replace="fragments/footer :: footer" />
 </body>
-
 </html>

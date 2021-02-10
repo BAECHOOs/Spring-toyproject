@@ -24,7 +24,7 @@
     <main class="text-center">
         <form class="form-signin" th:action="@{/account/login}" method="post">
             <img class="mb-4" src="/img/logo3.PNG" alt="" width="180" height="57">
-<!--            <h1 class="h3 mb-3 fw-normal">로그인</h1>-->
+            <h1 class="h3 mb-3 fw-normal">로그인</h1>
             <div th:if="${param.error}" class="alert alert-danger" role="alert">
                 아이디 혹은 비밀번호가 일치하지 않습니다.
             </div>
