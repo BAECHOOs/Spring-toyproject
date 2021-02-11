@@ -32,7 +32,7 @@ CREATE TABLE `like` (
                         KEY `like_fk2_idx` (`product_id`),
                         CONSTRAINT `like_fk1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
                         CONSTRAINT `like_fk2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,7 +60,7 @@ CREATE TABLE `order` (
                          KEY `order_fk2_idx` (`product_id`),
                          CONSTRAINT `order_fk1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
                          CONSTRAINT `order_fk2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `product` (
                            UNIQUE KEY `product_id_UNIQUE` (`product_id`),
                            KEY `user_id_idx` (`user_id`),
                            CONSTRAINT `product_fk1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -118,7 +118,7 @@ CREATE TABLE `role` (
                         `role_id` int NOT NULL,
                         `name` varchar(45) NOT NULL,
                         PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,18 +147,15 @@ CREATE TABLE `user` (
                         PRIMARY KEY (`user_id`),
                         UNIQUE KEY `user_id_UNIQUE` (`user_id`),
                         UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `user`
 --
 
-LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'hongil','hong@gmail.com','1google',_binary '\0'),(2,'test','test@naver.com','$2a$10$IAvlX8Fy8b0Msyqm5CUEmOECftR3kiztweWh64grRE/MVBoouTPf2',_binary ''),(3,'ttt2','ttt2@naver.com','$2a$10$8rr1rHGLk5UoYAGcc0rrBewRlg559EaRT/JytxPayhdjgBMo72zcW',_binary ''),(4,'tet','tet@naver.com','$2a$10$o3nGu1.PzWhBlMABmV.f5u1Gw2cfIncGgiGkShdWGXMEuwreodBsm',_binary ''),(5,'오상진','oh@test.com','$2a$10$iRkS0h1xtsIIwaeKSbUZ5uEwJDuNLuzepKocjse/bvavWJvrZR7QO',_binary ''),(6,'now','now@test.com','$2a$10$KA1hPW4UmKyupEZP9wxbAe3vs81JCA0vuP.qZQT6Fgv5at49.2MfG',_binary ''),(7,'yes@naver.com','yes@naver.com','$2a$10$KFIkGUhoDVteofMO/K.2Qu8y5KcDmfSSPfsXI9fvh38MuzRL9Uh9e',_binary ''),(8,'te','tfefeftt@ne.com','$2a$10$jffhYLvaAlnyGRyVMxAh4OUmNDYdme2waTcIdN/P9B64vF4yu2DcK',_binary ''),(9,'fo','fo@test.com','$2a$10$0c9t6G2O20fTh8Oq3Fd6XeEJCH5MVb9sej1HaH4mHSB2qjXRl74aC',_binary ''),(10,'aa','aa@naver.com','$2a$10$VeP/ud.2IVnLIfes1yLBuuS4ydwEH6ydWpukg/Os3p0RBFaL83V7a',_binary ''),(12,'tetr','now2@test.com','$2a$10$4GORA2j.d.8qTTdFOjAGlOr2VyOG9CxadzHqB0Co3Q0rB5V8.67x.',_binary ''),(13,'fd','nowefe@test.com','$2a$10$/5Wl.k84ELPyY7.WlgS9Nu8amOdSBwWnP95Stxy6zUQK0PzZhmz.2',_binary ''),(14,'ef','dsf@dasfhj.com','$2a$10$acTvpkRzgoVr/ThbHmHVDerbIma9nfQeEierlC1QmYuaVa6SA1BVq',_binary ''),(15,'해피라잎','fd@naver.com','$2a$10$K4eaYCM7xt4VrNFue2I9BOl2TaAah/BU6DvmQoLJ/ZyJ/HTlYsjRS',_binary '');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `user_role`
@@ -174,7 +171,7 @@ CREATE TABLE `user_role` (
                              KEY `role_id` (`role_id`),
                              CONSTRAINT `user_role_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
                              CONSTRAINT `user_role_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -183,7 +180,6 @@ CREATE TABLE `user_role` (
 
 LOCK TABLES `user_role` WRITE;
 /*!40000 ALTER TABLE `user_role` DISABLE KEYS */;
-INSERT INTO `user_role` VALUES (2,1),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1),(12,1),(13,1),(14,1),(15,1);
 /*!40000 ALTER TABLE `user_role` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
