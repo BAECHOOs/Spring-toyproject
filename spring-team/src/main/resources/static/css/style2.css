@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-header{background:#ddd; height:100px; text-align:center; font-size:50px; line-height:100px;}
-footer{background:#ddd; height:100px; text-align:center; font-size:50px; line-height:100px;}
-.wrap{width:100%; max-width:1200px; margin:0 auto;}
+/*header{background:#ddd; height:100px; text-align:center; font-size:50px; line-height:100px;}*/
+/*footer{background:#ddd; height:100px; text-align:center; font-size:20px; line-height:100px;}*/
+/*.wrap{width:100%; max-width:1200px; margin:0 auto;}*/
 
 .container{padding:100px 0;}
 .container > .wrap{display:flex;}
@@ -42,7 +42,7 @@ footer{background:#ddd; height:100px; text-align:center; font-size:50px; line-he
 .board-gallery .gallery-box:hover .gallery-contents{text-decoration:underline;}
 
 /* 게시판 - 페이징 */
-.pagination{margin-top:50px; text-align:center; font-size:0;}
+.pagination{margin-top:50px; text-align:center; font-size:0; }
 .pagination .pagelist{display:inline-block; font-size:0;}
 .pagination .pagelist > a + a{margin-left:5px;}
 .pagination .pagelist a{display:inline-block; width:40px; height:40px; border:1px solid #ddd; font-size:16px; text-align:center; line-height:40px; position:relative; transition:all .2s;}
@@ -99,3 +99,5 @@ p.tit{font-size:20px; font-weight:bold; margin-bottom:10px;}
 .tbl-box dl{display:table-row;}
 .tbl-box dl > *{display:table-cell;}
 .tbl-box dl dt{font-weight:500; width:100px;}
+
+
