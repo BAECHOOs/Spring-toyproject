@@ -25,7 +25,10 @@ public class AccountController {
         return "account/join";
     }
 
-
+    @GetMapping("/loginTest")
+    public String loginTest(){
+        return "account/loginTest";
+    }
 
     @PostMapping("/join")
     public String join(User user) {

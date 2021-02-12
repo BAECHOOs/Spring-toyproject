@@ -26,31 +26,37 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests()
-                    .antMatchers("/", "/home", "/css/**", "/img/**", "/account/join", "/board/**").permitAll()
-                    .anyRequest().authenticated()
-                    .and()
+            .authorizeRequests()
+                .antMatchers("/account/loginTest").hasRole("USER")
+                .antMatchers("/", "/home", "/css/**", "/img/**", "/account/join", "/board/**").permitAll()
+                .anyRequest().authenticated()
+            .and()
                 .formLogin()
-                    .loginPage("/account/login")
-                    .permitAll()
-                    .and()
+                .loginPage("/account/login")
+                .failureUrl("/account/login?error")
+                .permitAll()
+                .defaultSuccessUrl("/account/loginTest")
+            .and()
                 .logout()
-                    .permitAll();
+                .permitAll()
+                .logoutSuccessUrl("/");
     }
 
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth)
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth)
             throws Exception {
+        final String usernameQuery = "select user_id, password, enabled "+
+                                     "from user "+
+                                     "where email = ?";
+        final String authQuery = "select u.user_id, r.name as authority "+
+                                 "from user_role ur inner join user u on ur.user_id = u.user_id "+
+                                 "inner join role r on ur.role_id = r.role_id "+
+                                 "where u.user_id = ?";
+
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
-                .passwordEncoder(passwordEncoder())
-                .usersByUsernameQuery("select email, password, enabled "
-                        + "from user "
-                        + "where email = ?")
-                .authoritiesByUsernameQuery("select u.email, r.name as authority "
-                        + "from user_role ur inner join user u on ur.user_id = u.user_id "
-                        + "inner join role r on ur.role_id = r.role_id "
-                        + "where u.email = ?");
+                .usersByUsernameQuery(usernameQuery)
+                .authoritiesByUsernameQuery(authQuery);
     }
 
 
