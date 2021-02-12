@@ -3,10 +3,12 @@
 #wrap {}
 
 #header {
+    max-width:1200px;
     height: 89px;
     border: solid 0.3em white;
     /* border-bottom: #333333; */
     border-bottom-color: #EBEBEB;
+    margin:0 auto;
 }
 
 #banner {
@@ -53,9 +55,9 @@
 /* container */
 
 .container {
-    width: 1180px;
-    height: inherit;
-    margin: 0 auto;
+    /*width: 1180px;*/
+    /*height: inherit;*/
+    /*margin: 0 auto;*/
     /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
