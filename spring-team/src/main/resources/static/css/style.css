@@ -3,10 +3,12 @@
 #wrap {}
 
 #header {
+    max-width:1200px;
     height: 89px;
     border: solid 0.3em white;
     /* border-bottom: #333333; */
     border-bottom-color: #EBEBEB;
+    margin:0 auto;
 }
 
 #banner {
@@ -46,16 +48,16 @@
 
 #footer {
     height: 100px;
-    background-color: #EEEEEE;
+    background-color: black;
     
 }
 
 /* container */
 
 .container {
-    width: 1180px;
-    height: inherit;
-    margin: 0 auto;
+    /*width: 1180px;*/
+    /*height: inherit;*/
+    /*margin: 0 auto;*/
     /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
@@ -137,7 +139,7 @@
 }
 
 .main-part{
-    background-color: #EEE;
+    background-color: black;
     margin-left: auto;
     margin-right: auto;
     margin-top:100px;
@@ -145,4 +147,34 @@
     height:300px;
     padding: 3rem;
 
+}
+
+
+.container {
+    /*max-width: 960px;*/
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+
+.pricing-header {
+    max-width: 700px;
+}
+
+.row {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 1200px;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+input[type=password] {
+    font-family: "Bell MT";
+
+/*&::placeholder {*/
+/*     font-family: "NanumSquare";*/
+/* }*/
 }
