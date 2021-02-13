@@ -1,13 +1,17 @@
 package toyproject.springteam.domain;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Data
+//@NoArgsConstructor
+@Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +20,15 @@ public class User {
     private String email;
     private String password;
     private Boolean enabled;
+
+    @Builder
+    public User(String nickname, String email, String password, Boolean enabled, Role role){
+        this.nickname = nickname;
+        this.email = email;
+        this.password = password;
+        this.enabled = enabled;
+        this.roles.add(role);
+    }
 
     @ManyToMany
     @JoinTable(

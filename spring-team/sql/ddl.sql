@@ -20,6 +20,8 @@
 -- Table structure for table `like`
 --
 
+use baechoo;
+
 DROP TABLE IF EXISTS `like`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -119,7 +121,7 @@ CREATE TABLE `user` (
                         `nickname` varchar(40) NOT NULL,
                         `email` varchar(200) NOT NULL,
                         `password` varchar(200) NOT NULL,
-                        `enabled` bit(1) NOT NULL,
+                        `enabled` bit(1) NOT NULL DEFAULT 0,
                         PRIMARY KEY (`user_id`),
                         UNIQUE KEY `user_id_UNIQUE` (`user_id`),
                         UNIQUE KEY `email_UNIQUE` (`email`)
