@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "Order")
-public class Order {
+public class Order extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long order_id;
@@ -21,15 +21,13 @@ public class Order {
     @Column(name = "product_id", nullable = false)
     private Long product_id;
 
-    @Column(name = "purchase_check", nullable = false)
-    private Long purchase_check;
+    @Column(name = "purchased_done", nullable = false)
+    private Long purchased_done;
 
     @Builder
-    public Order(Long user_id, Long product_id, Long purchase_check) {
+    public Order(Long user_id, Long product_id, Long purchased_done) {
         this.user_id = user_id;
         this.product_id = product_id;
-        this.purchase_check = purchase_check;
+        this.purchased_done = purchased_done;
     }
-
-
 }
