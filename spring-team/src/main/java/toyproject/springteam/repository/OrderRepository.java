@@ -1,2 +1,3 @@
-package toyproject.springteam.repository;public interface OrderRepository {
+package toyproject.springteam.repository;
+public interface OrderRepository {
 }
