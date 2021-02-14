@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-//@NoArgsConstructor
+@NoArgsConstructor
 @Entity
 public class User {
     @Id
