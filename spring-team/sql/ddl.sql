@@ -75,6 +75,7 @@ CREATE TABLE IF NOT EXISTS `baechoo`.`product` (
   `view_count` INT NOT NULL DEFAULT 0,
   `purchase_done` TINYINT NOT NULL DEFAULT 0,
   `like_count` INT NOT NULL DEFAULT 0,
+  `order_id` INT DEFAULT NULL,
   PRIMARY KEY (`product_id`, `user_id`),
   UNIQUE INDEX `product_id_UNIQUE` (`product_id` ASC) VISIBLE,
   INDEX `user_id_idx` (`user_id` ASC) VISIBLE,
