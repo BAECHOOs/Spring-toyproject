@@ -12,7 +12,7 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 230px;
-  height: 280px;
+  height: 320px;
   border-radius: 5px; /* 5px rounded corners */
 }
 
@@ -21,27 +21,28 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.card img {
-  border-radius: 5px 5px 0 0;
+.product_img{
+  width: 230px;
+  height: 200px;
   object-fit: cover;
+  border-radius: 5px 5px 0 0;
 }
 
 .product_img_container{
+  display: inline-block;
   overflow: hidden;
   width: 230px;
-  height: 230px;
+  height: 200px;
 }
 
 .card_container {
   width: 230px;
+  height: 120px;
   padding: 12px 15px;
 }
 
 .product_title{
    font-size: 16px;
-   display: -webkit-box;
-   -webkit-line-clamp: 3;
-   -webkit-box-orient: vertical;
    line-height: 1.2em;
    height: 3.6em;
    overflow: hidden;
