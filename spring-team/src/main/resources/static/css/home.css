@@ -97,3 +97,9 @@
 #result .result-container .articles-wrap .flea-market-article .article-content {
   display: none;
 }
+
+
+.homelogo{
+    max-width: 100%;
+    max-height: 100%;
+}

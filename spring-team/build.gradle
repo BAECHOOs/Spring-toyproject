@@ -27,6 +27,8 @@ dependencies {
 	// security
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.security:spring-security-test'
+	// for live reload during development
+	compile("org.springframework.boot:spring-boot-devtools")
 }
 
 test {

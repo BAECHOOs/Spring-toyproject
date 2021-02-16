@@ -4,11 +4,67 @@
 <body>
     <div th:replace="fragments/headerbar :: headerbar" />
 
+    <span>
+        <img class="homelogo" src="/img/homelogo_blue.png" alt="홈 로고"  >
+    </span>
+
+
     <main class="container">
-        <span>
-            <h1>배추마켓 홈 입니다~!</h1>
-        </span>
+        <br>
+        <br>
+        <h4>최근 등록된 상품</h4>
+        <br>
+        <ul th:each="product : ${products}" class="product_list">
+            <li class="card">
+                <div class="product_img_container">
+                    <img th:src="${product.picture_url}" alt="제품 사진" >
+                </div>
+                <div class="card_container">
+                    <p th:text="${product.title}" class="product_title">제품 이름입니다</p>
+                    <p th:text="|${product.price}원|" class="product_cost"><b>제품 가격입니다.</b></p>
+                    <p th:text="${product.upload_date}" class="product_upload_time">올린 시간 입니다.</p>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <br>
+        <h4>하드 코딩한 샘플 데이타 입니더</h4>
+        <br>
+        <ul class="product_list">
+            <li class="card">
+                <img src="https://t1.daumcdn.net/cfile/tistory/99C25B445B3D566717" alt="Avatar" style="width:100%">
+                <div class="card_container">
+                    <p class="product_title">아이패드 ddOOOOOAXXX0dfdOOOOOAXXX0dfdOOOOOAXXX0dfdfdfdfdfdfdf18 제품 팝니다 프로예요 SSS급 보장</p>
+                    <p class="product_cost"><b>530,000원</b></p>
+                    <p class="product_upload_time">15시간 전</p>
+
+                </div>
+            </li>
+            <li class="card">
+                <img src="https://t1.daumcdn.net/cfile/tistory/99C25B445B3D566717" alt="Avatar" style="width:100%">
+                <div class="card_container">
+                    <p class="product_title">아이패드 ddOOOOOAXXX0dfdOOOOOAXXX0dfdOOOOOAXXX0dfdfdfdfdfdfdf18 제품 팝니다 프로예요 SSS급 보장</p>
+                    <p class="product_cost"><b>530,000원</b></p>
+                    <p class="product_upload_time">15시간 전</p>
+
+                </div>
+            </li>
+            <li class="card">
+                <img src="https://t1.daumcdn.net/cfile/tistory/99C25B445B3D566717" alt="Avatar" style="width:100%">
+                <div class="card_container">
+                    <p class="product_title">아이패드 ddOOOOOAXXX0dfdOOOOOAXXX0dfdOOOOOAXXX0dfdfdfdfdfdfdf18 제품 팝니다 프로예요 SSS급 보장</p>
+                    <p class="product_cost"><b>530,000원</b></p>
+                    <p class="product_upload_time">15시간 전</p>
+
+                </div>
+            </li>
+
+        </ul>
+
     </main>
+
     <div th:replace="fragments/footer :: footer" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/product_list.css" />
 </body>
 </html>
