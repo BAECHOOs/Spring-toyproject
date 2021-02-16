@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/board")
 public class BoardController {
 
-    @GetMapping("board_read")
+    @GetMapping("read")
     public String read(){
-        return "board/board_read";
+        return "board/read";
     }
 
-    @GetMapping("board_list")
+    @GetMapping("list")
     public String list(){
-        return "board/board_list";
+        return "board/list";
     }
 
-    @GetMapping("board_gallery")
+    @GetMapping("gallery")
     public String gallery(){
-        return "board/board_gallery";
+        return "board/gallery";
     }
 }

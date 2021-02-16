@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import toyproject.springteam.service.ProductService;
 import toyproject.springteam.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +15,9 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private ProductService productService;
+
     @GetMapping(value = {"/", "/index", "/home"})
 
     public String getHome(HttpServletRequest request, Model model) {
@@ -22,6 +26,7 @@ public class HomeController {
             Long id = Long.parseLong(user_id);
             model.addAttribute("nickname", userService.findById(id).getNickname());
         }
+        model.addAttribute("products", productService.findRecentProducts());
         return "home";
     }
 }
