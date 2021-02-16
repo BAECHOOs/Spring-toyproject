@@ -11,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "Product")
-public class Product {
+public class Product extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id", nullable = false)

@@ -7,6 +7,7 @@ import java.util.List;
 
 @Entity
 @Data
+@Table(schema = "baechoo", name = "Product")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
