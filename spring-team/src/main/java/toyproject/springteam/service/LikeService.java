@@ -14,7 +14,7 @@ public class LikeService {
     private final LikeRepository likeRepository;
 
     @Transactional
-    public Long save(LikeSaveRequestDto requestDto){
+    public Long save(LikeSaveRequestDto requestDto) {
         return likeRepository.save(requestDto.toEntity()).getId();
     }
 

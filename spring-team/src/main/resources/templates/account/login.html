@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:fragment="header">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <meta name="description" content="Spring으로 백엔드 시작하기" />
+    <meta name="keywords" content="Spring, 백엔드" />
+    <title>Baechoo Market</title>
+
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/signin.css}" rel="stylesheet">
+</head>
+
+<body>
+<div th:replace="fragments/headerbar :: headerbar" />
+<div class="container">
+    <main class="text-center">
+        <form class="form-signin" th:action="@{/account/login}" method="post">
+            <img class="mb-4" src="/img/logo3.PNG" alt="" width="180" height="57">
+            <h1 class="h3 mb-3 fw-normal">로그인</h1>
+            <div th:if="${param.error}" class="alert alert-danger" role="alert">
+                아이디 혹은 비밀번호가 일치하지 않습니다.
+            </div>
+            <div th:if="${param.logout}" class="alert alert-primary" role="alert">
+                로그아웃 되었습니다.
+            </div>
+
+            <label for="inputEmail" class="visually-hidden">email</label>
+            <input type="email" id="inputEmail" name="username" class="form-control" placeholder="이메일" required autofocus>
+            <label for="inputPassword" class="visually-hidden">password</label>
+            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="패스워드" required>
+<!--            <div class="checkbox mb-3">-->
+<!--                <label>-->
+<!--                    <input type="checkbox" value="remember-me"> Remember me-->
+<!--                </label>-->
+<!--            </div>-->
+            <button class="w-100 btn btn-lg btn-primary" type="submit">로그인</button>
+            <p class="mt-5 mb-3 text-muted">&copy;2021</p>
+        </form>
+    </main>
+</div>
+<div th:replace="fragments/footer :: footer" />
+</body>
+</html>
