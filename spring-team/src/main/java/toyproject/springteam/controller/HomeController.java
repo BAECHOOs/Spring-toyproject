@@ -19,7 +19,6 @@ public class HomeController {
     private ProductService productService;
 
     @GetMapping(value = {"/", "/index", "/home"})
-
     public String getHome(HttpServletRequest request, Model model) {
         String user_id = request.getRemoteUser();
         if (user_id != null) {

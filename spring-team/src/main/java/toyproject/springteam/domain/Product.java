@@ -11,14 +11,14 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "Product")
-public class Product extends BaseTimeEntity {
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id", nullable = false)
-    private Long product_id;
+    private Long productId;
 
     @Column(name = "user_id", nullable = false)
-    private Long user_id;
+    private Long userId;
 
     @Column(name = "title", nullable = false)
     private String title;
@@ -30,40 +30,41 @@ public class Product extends BaseTimeEntity {
     private String description;
 
     @Column(name = "picture_url", nullable = false)
-    private String picture_url;
+    private String pictureUrl;
 
     @Column(name = "upload_date", nullable = false)
-    private Date upload_date;
+    private Date uploadDate;
 
     @Column(name = "update_date", nullable = false)
-    private Date update_date;
+    private Date updateDate;
 
     @Column(name = "view_count", nullable = false)
-    private Long view_count;
+    private Long viewCount;
 
     @Column(name = "purchase_done", nullable = true)
-    private Boolean purchase_done;
+    private Boolean purchaseDone;
 
     @Column(name = "like_count", nullable = false)
-    private Long like_count;
+    private Long likeCount;
 
     @Column(name = "order_id", nullable = true)
-    private Long order_id;
+    private Long orderId;
 
     @Builder
-    public Product(Long user_id, String title, Long price, String description,
-                   String picture_url, Date upload_date, Date update_date,
-                   Long view_count, Boolean purchase_done, Long like_count, Long order_id) {
-        this.user_id = user_id;
+    public Product(Long productId, Long userId, String title, Long price, String description,
+                   String pictureUrl, Date uploadDate, Date updateDate,
+                   Long viewCount, Boolean purchaseDone, Long likeCount, Long orderId) {
+        this.productId = productId;
+        this.userId = userId;
         this.title = title;
         this.price = price;
         this.description = description;
-        this.picture_url = picture_url;
-        this.upload_date = upload_date;
-        this.update_date = update_date;
-        this.view_count = view_count;
-        this.purchase_done = purchase_done;
-        this.like_count = like_count;
-        this.order_id = order_id;
+        this.pictureUrl = pictureUrl;
+        this.uploadDate = uploadDate;
+        this.updateDate = updateDate;
+        this.viewCount = viewCount;
+        this.purchaseDone = purchaseDone;
+        this.likeCount = likeCount;
+        this.orderId = orderId;
     }
 }

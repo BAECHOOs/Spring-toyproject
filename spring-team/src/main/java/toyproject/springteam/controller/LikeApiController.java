@@ -18,9 +18,9 @@ public class LikeApiController {
     }
 
     @DeleteMapping("/api/like")
-    public Long delete(@PathVariable Long id){
-        likeService.delete(id);
-        return id;
+    public Long delete(@PathVariable Long likeId){
+        likeService.delete(likeId);
+        return likeId;
     }
 
     /* TODO : findById() 기능이 필요한지 잘 모르겠어서 구현 안함 */

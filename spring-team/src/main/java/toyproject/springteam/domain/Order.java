@@ -13,21 +13,21 @@ import javax.persistence.*;
 public class Order extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long order_id;
+    private Long orderId;
 
     @Column(name = "user_id", nullable = false)
-    private Long user_id;
+    private Long userId;
 
     @Column(name = "product_id", nullable = false)
-    private Long product_id;
+    private Long productId;
 
-    @Column(name = "purchased_done", nullable = false)
-    private Long purchased_done;
+    @Column(name = "purchase_done", nullable = false)
+    private Long purchaseDone;
 
     @Builder
-    public Order(Long user_id, Long product_id, Long purchased_done) {
-        this.user_id = user_id;
-        this.product_id = product_id;
-        this.purchased_done = purchased_done;
+    public Order(Long userId, Long productId, Long purchaseDone) {
+        this.userId = userId;
+        this.productId = productId;
+        this.purchaseDone = purchaseDone;
     }
 }

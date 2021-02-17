@@ -10,7 +10,7 @@ public class UserResponseDto {
     private String email;
 
     public UserResponseDto(User entity){
-        this.user_id = entity.getUser_id();
+        this.user_id = entity.getUserId();
         this.nickname = entity.getNickname();
         this.email = entity.getEmail();
     }

@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OrderDto {
 
-    private Long user_id;
-    private Long product_id;
-    private Long purchased_done;
+    private Long userId;
+    private Long productId;
+    private Long purchaseDone;
 }
