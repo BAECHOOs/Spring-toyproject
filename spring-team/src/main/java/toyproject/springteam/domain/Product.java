@@ -41,16 +41,19 @@ public class Product {
     @Column(name = "view_count", nullable = false)
     private Long view_count;
 
-    @Column(name = "purchase_done", nullable = false)
+    @Column(name = "purchase_done", nullable = true)
     private Boolean purchase_done;
 
     @Column(name = "like_count", nullable = false)
     private Long like_count;
 
+    @Column(name = "order_id", nullable = true)
+    private Long order_id;
+
     @Builder
     public Product(Long user_id, String title, Long price, String description,
                    String picture_url, Date upload_date, Date update_date,
-                   Long view_count, Boolean purchase_done, Long like_count) {
+                   Long view_count, Boolean purchase_done, Long like_count, Long order_id) {
         this.user_id = user_id;
         this.title = title;
         this.price = price;
@@ -61,5 +64,6 @@ public class Product {
         this.view_count = view_count;
         this.purchase_done = purchase_done;
         this.like_count = like_count;
+        this.order_id = order_id;
     }
 }
