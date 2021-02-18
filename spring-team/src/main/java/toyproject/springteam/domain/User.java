@@ -12,13 +12,23 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Entity
+@Table(schema = "baechoo", name = "User")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_id;
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
+
+    @Column(name = "nickname", nullable = false)
     private String nickname;
+
+    @Column(name = "email", nullable = false)
     private String email;
+
+    @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "enabled", nullable = false)
     private Boolean enabled;
 
     @Builder

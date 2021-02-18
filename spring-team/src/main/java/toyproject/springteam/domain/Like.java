@@ -10,21 +10,22 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Like extends BaseTimeEntity{
+@Table(schema = "baechoo", name = "Likes")
+public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "like_id", nullable = false)
+    private Long likeId;
 
-    @Column(nullable = false)
-    private Long user_id;
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
 
-    @Column(nullable = false)
-    private Long product_id;
+    @Column(name = "product_id",nullable = false)
+    private Long productId;
 
     @Builder
-    public Like(Long user_id, Long product_id){
-        this.user_id = user_id;
-        this.product_id = product_id;
+    public Like(Long userId, Long productId){
+        this.userId = userId;
+        this.productId = productId;
     }
-
 }
