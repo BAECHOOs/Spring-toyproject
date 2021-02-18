@@ -11,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "Product")
-public class Product {
+public class Product extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id", nullable = false)
@@ -41,13 +41,13 @@ public class Product {
     @Column(name = "view_count", nullable = false)
     private Long viewCount;
 
-    @Column(name = "purchase_done", nullable = true)
+    @Column(name = "purchase_done")
     private Boolean purchaseDone;
 
     @Column(name = "like_count", nullable = false)
     private Long likeCount;
 
-    @Column(name = "order_id", nullable = true)
+    @Column(name = "order_id")
     private Long orderId;
 
     @Builder
