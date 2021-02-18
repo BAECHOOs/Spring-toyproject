@@ -28,5 +28,4 @@ public class Like {
         this.userId = userId;
         this.productId = productId;
     }
-
 }
