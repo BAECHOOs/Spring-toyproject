@@ -2,90 +2,148 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="ko">
 <head>
     <meta charset="UTF-8" />
-    <meta id="viewport" name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta
+            id="viewport"
+            name="viewport"
+            content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+            crossorigin="anonymous"
+    />
 
     <meta name="description" content="Spring으로 백엔드 시작하기" />
     <meta name="keywords" content="Spring, 백엔드" />
     <title>Baechoo Market</title>
+
+    <script
+            src="https://kit.fontawesome.com/c67e363a33.js"
+            crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" th:href="@{/css/reset.css}" />
     <link rel="stylesheet" th:href="@{/css/style2.css}" />
     <link rel="stylesheet" th:href="@{/css/style.css}" />
 
     <!-- Custom styles for this template -->
-    <link th:href="@{/css/common.css}" rel="stylesheet">
+    <link th:href="@{/css/detail.css}" rel="stylesheet" />
 </head>
 
 <body>
-    <div th:replace="fragments/headerbar :: headerbar" />
+<div th:replace="fragments/headerbar :: headerbar" />
 
-    <div class="container">
-        <div class="wrap">
-            <main>
-                <div class="board-view">
-                    <!-- viewTitle -->
-                    <div class="view-header">
-                        <p class="tit">제목</p>
-                        <ul>
-                            <li><strong>등록일</strong>2021.01.25</li>
-                            <li><strong>조회수</strong>9</li>
-                        </ul>
-                    </div>
-                    <!-- //viewTitle -->
-                    <!-- viewContent -->
-                    <div class="view-body">
-                        <div class="view-contents-container">
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                                본문 내용이 들어갑니다. <br>    
-                            
-                        </div>
-                    </div>
+<div class="container">
+    <div class="wrap">
+        <main>
+            <div class="product-detail">
+                <img
+                        src="http://cdn.011st.com/11dims/resize/600x600/quality/75/11src/pd/21/9/5/9/7/6/2/dpKgz/971959762_B.jpg"
+                        class="detailImage"
+                />
+                <hr class="one" />
+                <div id="product-overview">
+                    <h2 class="product-title" style="margin-top: 0px">
+                        [리빙스타] 냄비/후라이팬
+                    </h2>
+                    <div class="section-bar"></div>
+                    <p class="product-price" property="schema:price">250,000원</p>
+
+                    <section class="icon-row">
+                <span class="heart-icon-span"
+                ><i class="far fa-heart"></i> 50 likes
+                </span>
+                        <span class="view-icon-span"
+                        ><i class="far fa-eye"></i> 213 views</span
+                        >
+                        <time> ∙ 10시간 전 </time>
+                    </section>
+
+                    <section class="button-list">
+                        <button type="button" class="btn btn-secondary">
+                  <span class="button-span-1"
+                  ><i class="far fa-heart"></i> 좋아요</span
+                  >
+                        </button>
+                        <button type="button" class="btn btn-info">
+                            <span class="button-span-1">연락하기</span>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="button-span-1">바로구매</span>
+                        </button>
+                    </section>
+
+                    <p
+                            property="schema:priceValidUntil"
+                            datatype="xsd:date"
+                            content="2023-02-17"
+                    ></p>
+                    <p
+                            rel="schema:url"
+                            resource="https://www.daangn.com/194308584"
+                    ></p>
+                    <p property="schema:priceCurrency" content="KRW"></p>
+                    <br /><br />
                 </div>
-
-                <div class="prev-next-post">
-                    <div class="prev-post">
-                    <a href="javascript:;">
-                        <strong>이전글</strong>
-                        <span>이전글이 없습니다.</span>
-                    </a>
-                    </div>
-                    <div class="next-post">
-                        <a href="javascript:;">
-                            <strong>다음글</strong>
-                            <span>다음글이 없습니다.</span>
-                        </a>
-                    </div>
+                <div class="product-buyer">
+                    <hr class="one" />
+                    <p class="product-buyer-span">구매 신청자 목록</p>
+                    <section class="button-buyer">
+                        <button type="button" class="btn btn-light">
+                            <span class="button-span-2"> 홍길동</span>
+                        </button>
+                        <button type="button" class="btn btn-light">
+                            <span class="button-span-2">닉네임</span>
+                        </button>
+                        <button type="button" class="btn btn-light">
+                            <span class="button-span-2">닉네임</span>
+                        </button>
+                    </section>
                 </div>
-
-                <div class="btn-area">
-                    <span class="btn-basic"><a href="javascript:;">목록</a></span>
+                <div class="product-description">
+                    <hr class="one" />
+                    <p class="product-buyer-span">제품 상세 설명</p>
+                    <span class="description"
+                    >열전도율이 우수하다. 가볍다. 다만, 우리가 평소에 라면 끓이는
+                냄비로 알고 있는 '양은냄비'는, '양은'(구리와 아연, 니켈의
+                합금)으로 만들어지지 않고, 알루미늄으로 만들어진다. 최근에
+                만들어진 '양은냄비'라는 것들은 대부분 알루미늄에다 노란색 산화막
+                코팅을 씌운 것으로 색깔과 질감만 양은(洋銀)과 비슷할 뿐이다.
+                따라서 라면 끓일 때 쓰이는 노란색 '양은냄비'는 사실상 알루미늄
+                냄비라고 봐야한다. 이러한 노란색 '양은냄비'를 금속 수세미같은
+                거친 도구로 씻다보면 노란색의 산화막 코팅이 벗겨져서 하얀(?)
+                금속부분이 드러나는데, 여기서 중금속(알루미늄)이 용출된다.
+                사실은 벗겨지지 않은 상태에서도 중금속은 이미 용출되고 있지만,
+                코팅이 벗겨지면 용출되는 속도가 빨라진다. 특히 토마토나
+                양배추같은 산성 식재료나 김치, 된장같은 염분이 많은 식재료를
+                넣어 끓이면, 산성과 염분에 알루미늄이 녹기 때문에 중금속이 더
+                많이 용출되어 나온다. 물론 용출되어 나오는 량은 미미한 량으로
+                한두번 양은냄비에 라면을 먹는다고 해서 몸에 크게 문제되지는
+                않는다.</span
+                    >
                 </div>
-
-            </main>
-
-        </div>
+            </div>
+            <div class="btn-area">
+                <button type="button" class="btn btn-dark" th:onclick="|javascript:list()|">
+                    <span class="button-list">목록</span>
+                </button>
+            </div>
+<!--            <div class="btn-area" th:href="@{/board/list}">-->
+<!--                <span class="btn-basic"><a href="javascript:;">목록</a></span>-->
+<!--            </div>-->
+        </main>
     </div>
-    <div th:replace="fragments/footer :: footer" />
+</div>
+<div th:replace="fragments/footer :: footer" />
 </body>
 </html>
+
+
+<script type="text/javascript"> function list() {
+    location.href="/board/list";}
+</script>
+
