@@ -18,12 +18,12 @@
             <li th:each="product : ${products}" class="card">
                 <a href="/">
                     <div class="product_img_container">
-                        <img th:src="${product.picture_url}" class="product_img" alt="제품 사진" >
+                        <img th:src="${product.pictureUrl}" class="product_img" alt="제품 사진" >
                     </div>
                     <div class="card_container">
                         <p th:text="${product.title}" class="product_title">제품 이름입니다</p>
                         <p th:text="|${product.price}원|" class="product_cost"><b>제품 가격입니다.</b></p>
-                        <p th:text="${product.upload_date}" class="product_upload_time">올린 시간 입니다.</p>
+                        <p th:text="${product.uploadDate}" class="product_upload_time">올린 시간 입니다.</p>
                     </div>
                 </a>
             </li>
