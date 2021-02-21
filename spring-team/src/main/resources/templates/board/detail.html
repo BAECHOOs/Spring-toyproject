@@ -26,6 +26,22 @@
             crossorigin="anonymous"
     ></script>
 
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" th:href="@{/css/reset.css}" />
     <link rel="stylesheet" th:href="@{/css/style2.css}" />
     <link rel="stylesheet" th:href="@{/css/style.css}" />
@@ -41,38 +57,71 @@
     <div class="wrap">
         <main>
             <div class="product-detail">
-                <img
+                <img  th:src="${prod.get().getPictureUrl()}"
                         src="http://cdn.011st.com/11dims/resize/600x600/quality/75/11src/pd/21/9/5/9/7/6/2/dpKgz/971959762_B.jpg"
                         class="detailImage"
                 />
                 <hr class="one" />
                 <div id="product-overview">
-                    <h2 class="product-title" style="margin-top: 0px">
+                    <h2 th:text="${prod.get().getTitle()}" class="product-title" style="margin-top: 0px">
                         [리빙스타] 냄비/후라이팬
                     </h2>
                     <div class="section-bar"></div>
-                    <p class="product-price" property="schema:price">250,000원</p>
+                    <p class="product-price" th:text="|${prod.get().getPrice()} 원|" property="schema:price">250,000원</p>
 
                     <section class="icon-row">
-                <span class="heart-icon-span"
+                <span th:text="|${prod.get().getLikeCount()} likes|" class="heart-icon-span"
                 ><i class="far fa-heart"></i> 50 likes
                 </span>
-                        <span class="view-icon-span"
+                        <span th:text="|${prod.get().getViewCount()} views|" class="view-icon-span"
                         ><i class="far fa-eye"></i> 213 views</span
                         >
-                        <time> ∙ 10시간 전 </time>
+                        <time th:text="${prod.get().getUpdateDate()}"> ∙ 10시간 전 </time>
                     </section>
 
                     <section class="button-list">
-                        <button type="button" class="btn btn-secondary">
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
                   <span class="button-span-1"
                   ><i class="far fa-heart"></i> 좋아요</span
                   >
                         </button>
+
+                        <!-- Modal -->
+                        <div
+                                class="modal fade"
+                                id="exampleModal"
+                                tabindex="-1"
+                                role="dialog"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                                th:if="${nickname==null}"
+                        >
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            로그인 후 이용 가능합니다.
+                                        </h5>
+                                    </div>
+                                    <div class="modal-body">바로 로그인 하시겠습니까?</div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">예</button>
+                                        <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-dismiss="modal"
+                                        >
+                                            아니요
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <button type="button" class="btn btn-info">
                             <span class="button-span-1">연락하기</span>
                         </button>
-                        <button type="button" class="btn btn-danger">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                             <span class="button-span-1">바로구매</span>
                         </button>
                     </section>
@@ -107,7 +156,7 @@
                 <div class="product-description">
                     <hr class="one" />
                     <p class="product-buyer-span">제품 상세 설명</p>
-                    <span class="description"
+                    <span th:text="${prod.get().getDescription()}" class="description"
                     >열전도율이 우수하다. 가볍다. 다만, 우리가 평소에 라면 끓이는
                 냄비로 알고 있는 '양은냄비'는, '양은'(구리와 아연, 니켈의
                 합금)으로 만들어지지 않고, 알루미늄으로 만들어진다. 최근에
