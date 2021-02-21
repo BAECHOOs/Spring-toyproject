@@ -16,7 +16,8 @@
         <br>
         <ul class="product_list">
             <li th:each="product : ${products}" class="card">
-                <a href="/">
+<!--                <a th:href="@{/board/detail/${product.productId}}">-->
+                <a th:href="@{/board/detail/{id}(id=${product.productId})}">
                     <div class="product_img_container">
                         <img th:src="${product.pictureUrl}" class="product_img" alt="제품 사진" >
                     </div>

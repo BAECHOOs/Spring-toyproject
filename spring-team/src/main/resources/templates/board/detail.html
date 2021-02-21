@@ -41,26 +41,26 @@
     <div class="wrap">
         <main>
             <div class="product-detail">
-                <img
+                <img  th:src="${prod.get().getPictureUrl()}"
                         src="http://cdn.011st.com/11dims/resize/600x600/quality/75/11src/pd/21/9/5/9/7/6/2/dpKgz/971959762_B.jpg"
                         class="detailImage"
                 />
                 <hr class="one" />
                 <div id="product-overview">
-                    <h2 class="product-title" style="margin-top: 0px">
+                    <h2 th:text="${prod.get().getTitle()}" class="product-title" style="margin-top: 0px">
                         [리빙스타] 냄비/후라이팬
                     </h2>
                     <div class="section-bar"></div>
-                    <p class="product-price" property="schema:price">250,000원</p>
+                    <p class="product-price" th:text="|${prod.get().getPrice()} 원|" property="schema:price">250,000원</p>
 
                     <section class="icon-row">
-                <span class="heart-icon-span"
+                <span th:text="|${prod.get().getLikeCount()} likes|" class="heart-icon-span"
                 ><i class="far fa-heart"></i> 50 likes
                 </span>
-                        <span class="view-icon-span"
+                        <span th:text="|${prod.get().getViewCount()} views|" class="view-icon-span"
                         ><i class="far fa-eye"></i> 213 views</span
                         >
-                        <time> ∙ 10시간 전 </time>
+                        <time th:text="${prod.get().getUpdateDate()}"> ∙ 10시간 전 </time>
                     </section>
 
                     <section class="button-list">
@@ -107,7 +107,7 @@
                 <div class="product-description">
                     <hr class="one" />
                     <p class="product-buyer-span">제품 상세 설명</p>
-                    <span class="description"
+                    <span th:text="${prod.get().getDescription()}" class="description"
                     >열전도율이 우수하다. 가볍다. 다만, 우리가 평소에 라면 끓이는
                 냄비로 알고 있는 '양은냄비'는, '양은'(구리와 아연, 니켈의
                 합금)으로 만들어지지 않고, 알루미늄으로 만들어진다. 최근에
