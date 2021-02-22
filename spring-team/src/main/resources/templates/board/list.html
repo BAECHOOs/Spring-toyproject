@@ -24,29 +24,26 @@
 <div th:replace="fragments/headerbar :: headerbar" />
 
     <main class="container">
-
-
         <div class="wrap">
-            <main>
-                <br>
-                <h4>최근 등록된 상품</h4>
-                <br>
-                <ul class="product_list">
-                    <li th:each="product : ${products}" class="card">
-                        <a href="/">
-                            <div class="product_img_container">
-                                <img th:src="${product.picture_url}" class="product_img" alt="제품 사진" >
-                            </div>
-                            <div class="card_container">
-                                <p th:text="${product.title}" class="product_title">제품 이름입니다</p>
-                                <p th:text="|${product.price}원|" class="product_cost"><b>제품 가격입니다.</b></p>
-                                <p th:text="${product.upload_date}" class="product_upload_time">올린 시간 입니다.</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <br>
-                <!-- BOARD TABLE -->
+            <br>
+            <h4>최근 등록된 상품</h4>
+            <br>
+            <ul class="product_list">
+                <li th:each="product : ${products}" class="card">
+                    <a href="/">
+                        <div class="product_img_container">
+                            <img th:src="${product.picture_url}" class="product_img" alt="제품 사진" >
+                        </div>
+                        <div class="card_container">
+                            <p th:text="${product.title}" class="product_title">제품 이름입니다</p>
+                            <p th:text="|${product.price}원|" class="product_cost"><b>제품 가격입니다.</b></p>
+                            <p th:text="${product.upload_date}" class="product_upload_time">올린 시간 입니다.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <br>
+            <!-- BOARD TABLE -->
 <!--                <table class="board-normal introduce-notice-board">-->
 <!--                    <caption>-->
 <!--                        새소식(번호, 제목, 작성일, 조회수, 파일)-->
@@ -80,28 +77,27 @@
 <!--                        </tr>-->
 <!--                    </tbody>-->
 <!--                </table>-->
-                <!-- //BOARD TABLE -->
-                
-                <!-- PAGINATION -->
-                <center>
-                    <div class="pagination">
-                        <div class="pagelist">
-                            <a href="javascript:;" class="first"><span class="blind">첫페이지</span></a>
-                            <a href="javascript:;" class="prev"><span class="blind">이전 페이지</span></a>
-                            <ul>
-                                <li class="active"><a href="javascript:;">1</a></li>
-                                <li><a href="javascript:;">2</a></li>
-                                <li><a href="javascript:;">3</a></li>
-                                <li><a href="javascript:;">4</a></li>
-                                <li><a href="javascript:;">5</a></li>
-                            </ul>
-                            <a href="javascript:;" class="next"><span class="blind">다음 페이지</span></a>
-                            <a href="javascript:;" class="last"><span class="blind">마지막페이지</span></a>
-                        </div>
+            <!-- //BOARD TABLE -->
+
+            <!-- PAGINATION -->
+            <center>
+                <div class="pagination">
+                    <div class="pagelist">
+                        <a href="javascript:;" class="first"><span class="blind">첫페이지</span></a>
+                        <a href="javascript:;" class="prev"><span class="blind">이전 페이지</span></a>
+                        <ul>
+                            <li class="active"><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                        </ul>
+                        <a href="javascript:;" class="next"><span class="blind">다음 페이지</span></a>
+                        <a href="javascript:;" class="last"><span class="blind">마지막페이지</span></a>
                     </div>
-                </center>
-                <!-- //PAGINATION -->
-            </main>
+                </div>
+            </center>
+            <!-- //PAGINATION -->
         </div>
     </main>
 

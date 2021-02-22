@@ -2,6 +2,7 @@ package toyproject.springteam.controller.dto;
 
 import lombok.Getter;
 import toyproject.springteam.domain.Product;
+import toyproject.springteam.util.PriceFormat;
 import toyproject.springteam.util.TimeFormat;
 
 import java.util.Date;
@@ -11,7 +12,7 @@ public class ProductListResponseDto {
     private Long product_id;
     private Long user_id;
     private String title;
-    private Long price;
+    private String price;
     private String description;
     private String picture_url;
 //    private Date upload_date;
@@ -26,7 +27,7 @@ public class ProductListResponseDto {
         this.product_id=entity.getProduct_id();
         this.user_id = entity.getUser_id();
         this.title = entity.getTitle();
-        this.price = entity.getPrice();
+        this.price = PriceFormat.format(entity.getPrice());
         this.description = entity.getDescription();
         this.picture_url = entity.getPicture_url();
         this.update_date = entity.getUpdate_date();
