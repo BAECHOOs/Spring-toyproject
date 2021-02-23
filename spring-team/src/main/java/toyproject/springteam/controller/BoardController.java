@@ -8,12 +8,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import toyproject.springteam.domain.Product;
 import toyproject.springteam.service.ProductService;
+import toyproject.springteam.service.UserService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
 @Controller
 @RequestMapping("/board")
 public class BoardController {
+
+    @Autowired
+    private UserService userService;
 
     @Autowired
     private ProductService productService;
@@ -25,12 +30,18 @@ public class BoardController {
         return "board/detail";
     }
 
-    @GetMapping("list")
-    public String list(){
+    @GetMapping("/list")
+    public String list(HttpServletRequest request, Model model) {
+        String user_id = request.getRemoteUser();
+        if (user_id != null) {
+            Long id = Long.parseLong(user_id);
+            model.addAttribute("nickname", userService.findById(id).getNickname());
+        }
+        model.addAttribute("products", productService.findRecentProducts());
         return "board/list";
     }
 
-    @GetMapping("gallery")
+    @GetMapping("/gallery")
     public String gallery(){
         return "board/gallery";
     }

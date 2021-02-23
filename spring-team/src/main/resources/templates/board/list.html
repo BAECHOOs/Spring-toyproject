@@ -23,46 +23,64 @@
 <body>
 <div th:replace="fragments/headerbar :: headerbar" />
 
-    <div class="container">
+    <main class="container">
         <div class="wrap">
-            <main>
-                <!-- BOARD TABLE -->
-                <table class="board-normal introduce-notice-board">
-                    <caption>
-                        새소식(번호, 제목, 작성일, 조회수, 파일)
-                    </caption>
-                    <colgroup>
-                        <col style="width: 5%;">
-                        <col style="width: 15%;">
-                        <col style="width: auto;">
-                        <col style="width: 10%;">
-                        <col style="width: 10%;">
-                        <col style="width: 10%;">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">분류</th>
-                            <th scope="col">제목</th>
-                            <th scope="col">첨부파일</th>
-                            <th scope="col">등록일자</th>
-                            <th scope="col">조회수</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>서울대공원</td>
-                            <td><a href="javascript:;">제목입니다.</a></td>
-                            <td></td>
-                            <td>2021.02.01</td>
-                            <td>41</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- //BOARD TABLE -->
-                
-                <!-- PAGINATION -->
+            <br>
+            <h4>최근 등록된 상품</h4>
+            <br>
+            <ul class="product_list">
+                <li th:each="product : ${products}" class="card">
+                    <a href="/">
+                        <div class="product_img_container">
+                            <img th:src="${product.picture_url}" class="product_img" alt="제품 사진" >
+                        </div>
+                        <div class="card_container">
+                            <p th:text="${product.title}" class="product_title">제품 이름입니다</p>
+                            <p th:text="|${product.price}원|" class="product_cost"><b>제품 가격입니다.</b></p>
+                            <p th:text="${product.upload_date}" class="product_upload_time">올린 시간 입니다.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <br>
+            <!-- BOARD TABLE -->
+<!--                <table class="board-normal introduce-notice-board">-->
+<!--                    <caption>-->
+<!--                        새소식(번호, 제목, 작성일, 조회수, 파일)-->
+<!--                    </caption>-->
+<!--                    <colgroup>-->
+<!--                        <col style="width: 5%;">-->
+<!--                        <col style="width: 15%;">-->
+<!--                        <col style="width: auto;">-->
+<!--                        <col style="width: 10%;">-->
+<!--                        <col style="width: 10%;">-->
+<!--                        <col style="width: 10%;">-->
+<!--                    </colgroup>-->
+<!--                    <thead>-->
+<!--                        <tr>-->
+<!--                            <th scope="col">번호</th>-->
+<!--                            <th scope="col">분류</th>-->
+<!--                            <th scope="col">제목</th>-->
+<!--                            <th scope="col">첨부파일</th>-->
+<!--                            <th scope="col">등록일자</th>-->
+<!--                            <th scope="col">조회수</th>-->
+<!--                        </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                        <tr>-->
+<!--                            <td>1</td>-->
+<!--                            <td>서울대공원</td>-->
+<!--                            <td><a href="javascript:;">제목입니다.</a></td>-->
+<!--                            <td></td>-->
+<!--                            <td>2021.02.01</td>-->
+<!--                            <td>41</td>-->
+<!--                        </tr>-->
+<!--                    </tbody>-->
+<!--                </table>-->
+            <!-- //BOARD TABLE -->
+
+            <!-- PAGINATION -->
+            <center>
                 <div class="pagination">
                     <div class="pagelist">
                         <a href="javascript:;" class="first"><span class="blind">첫페이지</span></a>
@@ -78,11 +96,13 @@
                         <a href="javascript:;" class="last"><span class="blind">마지막페이지</span></a>
                     </div>
                 </div>
-                <!-- //PAGINATION -->
-            </main>
+            </center>
+            <!-- //PAGINATION -->
         </div>
-    </div>
+    </main>
 
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/product_list.css" />
 <div th:replace="fragments/footer :: footer" />
 </body>
 </html>

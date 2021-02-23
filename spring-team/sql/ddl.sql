@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `baechoo`.`user` (
   `user_id` INT NOT NULL AUTO_INCREMENT,
   `nickname` VARCHAR(40) NOT NULL,
   `email` VARCHAR(200) NOT NULL,
-  `password` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
   `enabled` bit(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`user_id`),
   UNIQUE INDEX `user_id_UNIQUE` (`user_id` ASC) VISIBLE,
