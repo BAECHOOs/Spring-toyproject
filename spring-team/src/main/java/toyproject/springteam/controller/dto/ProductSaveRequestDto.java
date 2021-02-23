@@ -11,7 +11,7 @@ import toyproject.springteam.domain.Product;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductForm {
+public class ProductSaveRequestDto {
     private String title;
     private Long price;
     private String description;

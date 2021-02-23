@@ -35,9 +35,11 @@ public class Order {
     private Product product;
 
     @Builder
-    public Order(Boolean purchaseDone) { //Long userId, Long productId,
+    public Order(Boolean purchaseDone, User user, Product product) { //Long userId, Long productId,
         //this.userId = userId;
         //this.productId = productId;
         this.purchaseDone = purchaseDone;
+        this.user = user;
+        this.product = product;
     }
 }

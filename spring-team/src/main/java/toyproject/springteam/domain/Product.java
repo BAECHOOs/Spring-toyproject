@@ -65,7 +65,7 @@ public class Product extends BaseTimeEntity {
     @Builder
     public Product(String title, Long price, String description,
                    String pictureUrl, //Date uploadDate, Date updateDate,
-                   Long viewCount, Boolean purchaseDone, Long likeCount, Long orderId) {
+                   Long viewCount, Boolean purchaseDone, Long likeCount, Long orderId, User user) {
         //this.userId = userId;
         this.title = title;
         this.price = price;
@@ -77,6 +77,7 @@ public class Product extends BaseTimeEntity {
         this.purchaseDone = purchaseDone;
         this.likeCount = likeCount;
         this.orderId = orderId;
+        this.user = user;
     }
 
 

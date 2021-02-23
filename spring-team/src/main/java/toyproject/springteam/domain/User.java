@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,16 +20,17 @@ public class User {
     @Column(name = "user_id", nullable = false)
     private Long userId;
 
-    @Column(name = "nickname", nullable = false, columnDefinition = "VARCHAR(40) NOT NULL")
+    @Column(name = "nickname", nullable = false)
     private String nickname;
 
-    @Column(name = "email", nullable = false, columnDefinition = "VARCHAR(200) NOT NULL")
+    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "password", nullable = false, columnDefinition = "VARCHAR(20) NOT NULL")
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "enabled", nullable = false, columnDefinition = "bit(1) NOT NULL DEFAULT 0")
+    @Column(name = "enabled", nullable = false)
+    @ColumnDefault("0")
     private Boolean enabled;
 
     @Builder

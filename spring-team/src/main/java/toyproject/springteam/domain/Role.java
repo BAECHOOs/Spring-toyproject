@@ -14,7 +14,7 @@ public class Role {
     @Column(name = "role_id", nullable = false)
     private Long roleId;
 
-    @Column(name = "name", nullable = false, columnDefinition = "varchar(45) NOT NULL")
+    @Column(name = "name", nullable = false)
     private String name;
 
     @ManyToMany(mappedBy = "roles")
