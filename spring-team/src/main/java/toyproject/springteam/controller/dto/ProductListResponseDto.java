@@ -2,6 +2,8 @@ package toyproject.springteam.controller.dto;
 
 import lombok.Getter;
 import toyproject.springteam.domain.Product;
+import toyproject.springteam.util.PriceFormat;
+import toyproject.springteam.util.TimeFormat;
 
 import java.util.Date;
 
@@ -28,7 +30,7 @@ public class ProductListResponseDto {
         this.description = entity.getDescription();
         this.pictureUrl = entity.getPictureUrl();
         this.updateDate = entity.getUpdateDate();
-        this.uploadDate = TimeFormat.formatTimeString(entity.getUpload_date());
+        this.uploadDate = TimeFormat.formatTimeString(entity.getUploadDate());
         this.viewCount = entity.getViewCount();
         this.purchaseDone = entity.getPurchaseDone();
         this.likeCount = entity.getLikeCount();
