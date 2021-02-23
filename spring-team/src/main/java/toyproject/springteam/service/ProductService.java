@@ -18,8 +18,8 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
+//@Transactional
 public class ProductService {
-
 
     @Autowired
     private final ProductRepository productRepository;

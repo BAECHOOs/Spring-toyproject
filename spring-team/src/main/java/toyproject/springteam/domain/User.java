@@ -19,16 +19,16 @@ public class User {
     @Column(name = "user_id", nullable = false)
     private Long userId;
 
-    @Column(name = "nickname", nullable = false)
+    @Column(name = "nickname", nullable = false, columnDefinition = "VARCHAR(40) NOT NULL")
     private String nickname;
 
-    @Column(name = "email", nullable = false)
+    @Column(name = "email", nullable = false, columnDefinition = "VARCHAR(200) NOT NULL")
     private String email;
 
-    @Column(name = "password", nullable = false)
+    @Column(name = "password", nullable = false, columnDefinition = "VARCHAR(20) NOT NULL")
     private String password;
 
-    @Column(name = "enabled", nullable = false)
+    @Column(name = "enabled", nullable = false, columnDefinition = "bit(1) NOT NULL DEFAULT 0")
     private Boolean enabled;
 
     @Builder
@@ -46,4 +46,8 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<Role> roles = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user") // Product에서 User를 참조한 이름: user (private User user)
+    private List<Product> products;
+
 }

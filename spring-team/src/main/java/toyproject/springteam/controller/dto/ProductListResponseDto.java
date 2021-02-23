@@ -8,13 +8,11 @@ import java.util.Date;
 @Getter
 public class ProductListResponseDto {
     private Long productId;
-    private Long userId;
+    //private Long userId;
     private String title;
     private Long price;
     private String description;
     private String pictureUrl;
-    private Date uploadDate;
-    private Date updateDate;
     private Long viewCount;
     private Boolean purchaseDone;
     private Long likeCount;
@@ -22,13 +20,11 @@ public class ProductListResponseDto {
 
     public ProductListResponseDto(Product entity){
         this.productId =entity.getProductId();
-        this.userId = entity.getUserId();
+        //this.userId = entity.getUserId();
         this.title = entity.getTitle();
         this.price = entity.getPrice();
         this.description = entity.getDescription();
         this.pictureUrl = entity.getPictureUrl();
-        this.updateDate = entity.getUpdateDate();
-        this.uploadDate = entity.getUploadDate();
         this.viewCount = entity.getViewCount();
         this.purchaseDone = entity.getPurchaseDone();
         this.likeCount = entity.getLikeCount();

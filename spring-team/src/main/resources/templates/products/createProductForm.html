@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <form action="/baechoo/products/new" method="post">
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" id="title" name="title" placeholder="이름을 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="price">가격</label>
+            <input type="number" id="price" name="price" placeholder="이름을 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="description">내용</label>
+            <input type="text" id="description" name="description" placeholder="이름을 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="picture">사진</label>
+            <input type="file" id="picture" name="picture" accept="image/*">
+        </div>
+        <button type="submit">등록</button>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>
