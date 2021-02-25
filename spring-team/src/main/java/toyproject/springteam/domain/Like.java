@@ -18,12 +18,6 @@ public class Like {
     @Column(name = "like_id", nullable = false)
     private Long likeId;
 
-    /*@Column(name = "user_id", nullable = false)
-    private Long userId;
-
-    @Column(name = "product_id",nullable = false)
-    private Long productId;*/
-
     @ManyToOne(targetEntity = User.class, fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
@@ -33,10 +27,8 @@ public class Like {
     private Product product;
 
     @Builder
-    public Like(User user, Product product){ //Long userId, Long productId
+    public Like(User user, Product product){
         this.user = user;
         this.product = product;
-        //this.userId = userId;
-        //this.productId = productId;
     }
 }
