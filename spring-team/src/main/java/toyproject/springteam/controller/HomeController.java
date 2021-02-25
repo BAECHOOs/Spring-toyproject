@@ -29,15 +29,4 @@ public class HomeController {
         return "home";
     }
 
-
-    @GetMapping(value = {"board/upload"})
-    public String upload(HttpServletRequest request, Model model) {
-        String user_id = request.getRemoteUser();
-        if (user_id != null) {
-            Long id = Long.parseLong(user_id);
-            model.addAttribute("user", userService.findById(id));
-        }
-
-        return "board/upload";
-    }
 }
