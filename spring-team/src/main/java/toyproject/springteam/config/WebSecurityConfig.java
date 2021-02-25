@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
                 .antMatchers("/account/loginTest").hasRole("USER")
-                .antMatchers("/", "/home", "/css/**", "/img/**", "/account/join", "/board/**").permitAll()
+                .antMatchers("/", "/home", "/css/**", "/img/**", "/account/join", "/board/**", "/baechoo/**", "/products/**").permitAll()
                 .anyRequest().authenticated()
             .and()
                 .formLogin()
@@ -40,7 +40,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .logoutUrl("/account/logout")
                 .permitAll()
-                .logoutSuccessUrl("/account/login");
+                .logoutSuccessUrl("/account/login")
+            .and().csrf().disable(); //Post Method를 가능하게 함
     }
 
     @Override

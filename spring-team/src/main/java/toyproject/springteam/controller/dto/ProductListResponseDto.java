@@ -5,26 +5,26 @@ import toyproject.springteam.domain.Product;
 import toyproject.springteam.util.PriceFormat;
 import toyproject.springteam.util.TimeFormat;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter
 public class ProductListResponseDto {
     private Long productId;
-    private Long userId;
+    //private Long userId;
     private String title;
     private String price;
     private String description;
     private String pictureUrl;
+    private LocalDateTime updateDate;
     private String uploadDate;
-    private Date updateDate;
     private Long viewCount;
     private Boolean purchaseDone;
     private Long likeCount;
     private Long orderId;
 
     public ProductListResponseDto(Product entity){
-        this.productId = entity.getProductId();
-        this.userId = entity.getUserId();
+        this.productId =entity.getProductId();
+        //this.userId = entity.getUserId();
         this.title = entity.getTitle();
         this.price = PriceFormat.format(entity.getPrice());
         this.description = entity.getDescription();

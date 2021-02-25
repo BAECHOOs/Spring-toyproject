@@ -2,8 +2,9 @@ package toyproject.springteam.domain;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "User")
+@DynamicInsert
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +31,18 @@ public class User {
     private String password;
 
     @Column(name = "enabled", nullable = false)
+    @ColumnDefault("0")
     private Boolean enabled;
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private List<Role> roles = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user") // Product에서 User를 참조한 이름: user (private User user)
+    private List<Product> products;
 
     @Builder
     public User(String nickname, String email, String password, Boolean enabled, Role role){
@@ -39,11 +52,4 @@ public class User {
         this.enabled = enabled;
         this.roles.add(role);
     }
-
-    @ManyToMany
-    @JoinTable(
-            name = "user_role",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private List<Role> roles = new ArrayList<>();
 }

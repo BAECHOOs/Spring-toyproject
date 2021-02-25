@@ -5,12 +5,12 @@ import toyproject.springteam.domain.User;
 
 @Getter
 public class UserResponseDto {
-    private Long user_id;
+    private Long userId;
     private String nickname;
     private String email;
 
     public UserResponseDto(User entity){
-        this.user_id = entity.getUserId();
+        this.userId = entity.getUserId();
         this.nickname = entity.getNickname();
         this.email = entity.getEmail();
     }
