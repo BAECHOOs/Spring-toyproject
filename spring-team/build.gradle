@@ -8,6 +8,12 @@ group = 'toyproject'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
 repositories {
 	mavenCentral()
 }
@@ -17,7 +23,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	// lombok for getter, setter
 	implementation 'org.projectlombok:lombok'
-	annotationProcessor('org.projectlombok:lombok')
+	implementation 'junit:junit:4.12'
+	annotationProcessor 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor('org.projectlombok:lombok')
 	// jpa
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
@@ -29,6 +37,7 @@ dependencies {
 	implementation 'org.springframework.security:spring-security-test'
 	// for live reload during development
 	compile("org.springframework.boot:spring-boot-devtools")
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 test {

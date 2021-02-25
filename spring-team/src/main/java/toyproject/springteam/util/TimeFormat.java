@@ -1,5 +1,7 @@
 package toyproject.springteam.util;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class TimeFormat {
@@ -11,9 +13,10 @@ public class TimeFormat {
         public static final int MONTH = 12;
     }
 
-    public static String formatTimeString(Date date) {
+    public static String formatTimeString(LocalDateTime date) {
+        Date regDate = Date.from(date.atZone(ZoneId.systemDefault()).toInstant());
         long curTime = System.currentTimeMillis();
-        long regTime = date.getTime();
+        long regTime = regDate.getTime();
         long diffTime = (curTime - regTime) / 1000;
 
         String msg = null;

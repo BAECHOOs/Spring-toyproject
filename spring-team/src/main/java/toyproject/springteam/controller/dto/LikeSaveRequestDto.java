@@ -19,8 +19,8 @@ public class LikeSaveRequestDto {
 
     public Like toEntity(){
         return Like.builder()
-                .userId(userId)
-                .productId(productId)
+                //.userId(userId)
+                //.productId(productId)
                 .build();
     }
 
