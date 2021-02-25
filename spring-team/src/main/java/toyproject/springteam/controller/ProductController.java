@@ -1,15 +1,14 @@
 package toyproject.springteam.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 import toyproject.springteam.controller.dto.ProductSaveRequestDto;
-import toyproject.springteam.domain.Product;
 import toyproject.springteam.service.ProductService;
 
 @Controller
+@RequestMapping("/products")
 public class ProductController {
     private final ProductService productService;
 
@@ -18,22 +17,15 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/baechoo/products/new")
+    @GetMapping("/new")
     public String createProductForm() {
-        return "products/createProductForm";
+        return "products/new.html";
     }
 
-
-    /*private String title;
-    private Long price;
-    private String description;
-    private String pictureUrl;
-
-
-    @PostMapping("/baechoo/products/new")
-    public String saveProduct(@RequestBody ProductSaveRequestDto form) {
-
-
-        return "redirect:/baechoo/home"; //home 화면으로 이동
-    }*/
+    @PostMapping("/new")
+    public String createProduct(ProductSaveRequestDto requestDto) {
+        productService.saveProduct(requestDto);
+        return "redirect:/"; //home 화면으로 이동
+    }
 }
+

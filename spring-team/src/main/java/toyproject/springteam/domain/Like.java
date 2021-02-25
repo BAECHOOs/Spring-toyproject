@@ -3,7 +3,7 @@ package toyproject.springteam.domain;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 
@@ -11,6 +11,7 @@ import javax.persistence.*;
 //@NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "Likes")
+@DynamicInsert
 public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -2,9 +2,9 @@ package toyproject.springteam.domain;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "User")
+@DynamicInsert
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,15 +34,6 @@ public class User {
     @ColumnDefault("0")
     private Boolean enabled;
 
-    @Builder
-    public User(String nickname, String email, String password, Boolean enabled, Role role){
-        this.nickname = nickname;
-        this.email = email;
-        this.password = password;
-        this.enabled = enabled;
-        this.roles.add(role);
-    }
-
     @ManyToMany
     @JoinTable(
             name = "user_role",
@@ -52,4 +44,12 @@ public class User {
     @OneToMany(mappedBy = "user") // Product에서 User를 참조한 이름: user (private User user)
     private List<Product> products;
 
+    @Builder
+    public User(String nickname, String email, String password, Boolean enabled, Role role){
+        this.nickname = nickname;
+        this.email = email;
+        this.password = password;
+        this.enabled = enabled;
+        this.roles.add(role);
+    }
 }

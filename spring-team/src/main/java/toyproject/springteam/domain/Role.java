@@ -1,6 +1,7 @@
 package toyproject.springteam.domain;
 
 import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,6 +9,7 @@ import java.util.List;
 @Entity
 @Data
 @Table(schema = "baechoo", name = "Role")
+@DynamicInsert
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
