@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<body>
+<div th:replace="fragments/headerbar :: headerbar" />
+
+<main class="container">
+    <div class="main" style="text-align:center;">
+        <br>
+        <div class="wrap-contact100">
+            <form class="contact100-form">
+				<span class="contact100-form-title">
+					내 물건 올리기
+				</span>
+
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="name" placeholder="제목을 입력해 주세요">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100" >
+                    <textarea class="input100" name="message" placeholder="물건 설명을 입력해 주세요"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <div>
+                    <label>사진 첨부</label>
+                    <input type="file" name="file" >
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn">
+                        물건 올리기
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</main>
+<div th:replace="fragments/footer :: footer" />
+<link rel="stylesheet" href="/css/home.css" />
+<link rel="stylesheet" href="/css/upload.css" />
+</body>
+</html>

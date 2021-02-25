@@ -94,7 +94,7 @@
                                 role="dialog"
                                 aria-labelledby="exampleModalLabel"
                                 aria-hidden="true"
-                                th:if="${nickname==null}"
+                                th:if="${user==null}"
                         >
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -177,9 +177,11 @@
                 </div>
             </div>
             <div class="btn-area">
-                <button type="button" class="btn btn-dark" th:onclick="|javascript:list()|">
-                    <span class="button-list">목록</span>
-                </button>
+                <a th:href="@{/home}">
+                    <button type="button" class="btn btn-dark" >
+                        <span class="button-list">목록</span>
+                    </button>
+                </a>
             </div>
 <!--            <div class="btn-area" th:href="@{/board/list}">-->
 <!--                <span class="btn-basic"><a href="javascript:;">목록</a></span>-->
