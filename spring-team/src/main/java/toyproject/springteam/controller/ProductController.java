@@ -19,7 +19,7 @@ public class ProductController {
 
     @GetMapping("/new")
     public String createProductForm() {
-        return "products/new.html";
+        return "products/new";
     }
 
     @PostMapping("/new")

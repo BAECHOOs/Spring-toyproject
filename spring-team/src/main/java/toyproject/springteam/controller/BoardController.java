@@ -35,7 +35,7 @@ public class BoardController {
         String user_id = request.getRemoteUser();
         if (user_id != null) {
             Long id = Long.parseLong(user_id);
-            model.addAttribute("nickname", userService.findById(id).getNickname());
+            model.addAttribute("user", userService.findById(id));
         }
         model.addAttribute("products", productService.findRecentProducts());
         return "board/list";

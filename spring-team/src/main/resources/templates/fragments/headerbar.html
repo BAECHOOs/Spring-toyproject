@@ -6,18 +6,18 @@
             <div class="header">
                 <a th:href="@{/}"><img class="logo" src="/img/logo1.PNG" alt="우리로고"  ></a>
                 <ul class="quick">
-                    <li th:if="${nickname!=null}">
-                        <strong><a th:text="${nickname}"></a></strong><a>님</a>
+                    <li th:if="${user!=null}">
+                        <strong><a th:text="${user.getNickname()}"></a></strong><a>님</a>
                     </li>
-                    <li th:if="${nickname==null}">
+                    <li th:if="${user==null}">
                         <a href="#" th:href="@{/account/login}">로그인</a>
                     </li>
-                    <li th:if="${nickname==null}">
+                    <li th:if="${user==null}">
                         <a href="#" th:href="@{/account/join}">회원가입</a>
                     </li>
                     <li><a href="#" th:href="@{/products/new}">글쓰기</a></li>
                     <li><a href="#" th:href="@{/board/list}">리스트</a></li>
-                    <li th:if="${nickname!=null}">
+                    <li th:if="${user!=null}">
                         <a href="#" th:href="@{/account/logout}">로그아웃</a>
                     </li>
                 </ul>
