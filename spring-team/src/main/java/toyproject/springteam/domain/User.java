@@ -44,6 +44,9 @@ public class User {
     @OneToMany(mappedBy = "user") // Product에서 User를 참조한 이름: user (private User user)
     private List<Product> products;
 
+    /*@OneToMany(mappedBy = "user2")
+    private List<UserRole> userRoles;*/
+
     @Builder
     public User(String nickname, String email, String password, Boolean enabled, Role role){
         this.nickname = nickname;

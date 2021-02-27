@@ -22,6 +22,9 @@ public class Role {
     @ManyToMany(mappedBy = "roles")
     private List<User> users;
 
+    /*@OneToMany(mappedBy = "role")
+    private List<UserRole> userRoles;*/
+
     public void setId(long l) {
         roleId = l;
     }
