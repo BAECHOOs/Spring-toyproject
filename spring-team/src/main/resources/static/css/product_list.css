@@ -41,6 +41,7 @@
   padding: 12px 15px;
 }
 
+
 .product_title{
    font-size: 16px;
    line-height: 1.2em;
@@ -53,11 +54,14 @@
 
 .product_cost{
     font-size: 20px;
-    font-style: bold;
     float: left;
 }
 
 .product_upload_time{
-    font-size: 10px;
+    font-size: 12px;
+    float: right;
+}
+
+.product_counts{
     float: right;
 }
