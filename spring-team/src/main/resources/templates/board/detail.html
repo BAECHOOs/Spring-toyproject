@@ -124,7 +124,7 @@
                             <span class="button-span-1">연락하기</span>
                         </button>
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                            <span class="button-span-1">바로구매</span>
+                            <span class="button-span-1">구매신청</span>
                         </button>
                     </section>
 
@@ -139,8 +139,9 @@
                     ></p>
                     <p property="schema:priceCurrency" content="KRW"></p>
                     <br /><br />
+                    <button type="button" class="btn btn-primary delete-product" th:if="${isOwner}">삭제하기</button>
                 </div>
-                <div class="product-buyer">
+                <div class="product-buyer" th:if="${isOwner}">
                     <hr class="one" />
                     <p class="product-buyer-span">구매 신청자 목록</p>
                     <section class="button-buyer">

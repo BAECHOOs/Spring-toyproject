@@ -30,9 +30,15 @@ public class BoardController {
             Long id = Long.parseLong(user_id);
             model.addAttribute("user", userService.findById(id));
         }
-
         Optional<Product> prod = productService.findById(prod_id);
         model.addAttribute("prod", prod);
+
+        boolean isOwner = false;
+        if(prod.get().getUser().getUserId() == Integer.parseInt(user_id)){
+            isOwner = true;
+        }
+
+        model.addAttribute("isOwner", isOwner);
         return "board/detail";
     }
 
