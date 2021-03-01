@@ -2,6 +2,7 @@ package toyproject.springteam.domain;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
@@ -10,8 +11,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Data
-@NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "User")
 @DynamicInsert
@@ -43,6 +44,9 @@ public class User {
 
     @OneToMany(mappedBy = "user") // Product에서 User를 참조한 이름: user (private User user)
     private List<Product> products;
+
+    @OneToMany(mappedBy = "user")
+    private List<UserRole> userRoles;
 
     @Builder
     public User(String nickname, String email, String password, Boolean enabled, Role role){

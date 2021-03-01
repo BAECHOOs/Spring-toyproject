@@ -1,13 +1,14 @@
 package toyproject.springteam.domain;
 
-import lombok.Data;
+import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Getter
+@NoArgsConstructor
 @Entity
-@Data
 @Table(schema = "baechoo", name = "Role")
 @DynamicInsert
 public class Role {
@@ -22,7 +23,15 @@ public class Role {
     @ManyToMany(mappedBy = "roles")
     private List<User> users;
 
+    @OneToMany(mappedBy = "role")
+    private List<UserRole> userRoles;
+
     public void setId(long l) {
         roleId = l;
+    }
+
+    public Role(Long roleId, String name){
+        this.roleId = roleId;
+        this.name = name;
     }
 }
