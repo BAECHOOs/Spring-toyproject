@@ -105,7 +105,9 @@
                                     </div>
                                     <div class="modal-body">바로 로그인 하시겠습니까?</div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary">예</button>
+                                        <a th:href="@{/account/login}">
+                                            <button type="button" class="btn btn-primary">예</button>
+                                        </a>
                                         <button
                                                 type="button"
                                                 class="btn btn-secondary"
@@ -118,7 +120,7 @@
                             </div>
                         </div>
 
-                        <button type="button" class="btn btn-info">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
                             <span class="button-span-1">연락하기</span>
                         </button>
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
@@ -197,4 +199,9 @@
 <script type="text/javascript"> function list() {
     location.href="/board/list";}
 </script>
+
+<script type="text/javascript"> function login() {
+    location.href="/account/login";}
+</script>
+
 

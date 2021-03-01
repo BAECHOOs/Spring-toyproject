@@ -24,8 +24,14 @@ public class BoardController {
     private ProductService productService;
 
     @GetMapping("detail/{num}")
-    public String detail(@PathVariable("num") Long id, Model model){
-        Optional<Product> prod = productService.findById(id);
+    public String detail(@PathVariable("num") Long prod_id, HttpServletRequest request, Model model){
+        String user_id = request.getRemoteUser();
+        if (user_id != null) {
+            Long id = Long.parseLong(user_id);
+            model.addAttribute("user", userService.findById(id));
+        }
+
+        Optional<Product> prod = productService.findById(prod_id);
         model.addAttribute("prod", prod);
         return "board/detail";
     }
