@@ -2,7 +2,6 @@ package toyproject.springteam.domain;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
@@ -16,6 +15,7 @@ import java.util.List;
 @Entity
 @Table(schema = "baechoo", name = "User")
 @DynamicInsert
+@NoArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
