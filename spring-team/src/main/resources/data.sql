@@ -1,0 +1,1 @@
+INSERT INTO role (role_id, `name`) values(1, 'USER_ROLE') ON DUPLICATE KEY UPDATE role_id=1, `name`='USER_ROLE';

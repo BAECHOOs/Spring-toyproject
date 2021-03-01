@@ -128,3 +128,6 @@
 
 <img src="https://user-images.githubusercontent.com/41130448/106470901-684b0480-64e4-11eb-9fe2-50630fa81181.png" alt="image" style="zoom:80%;" />
 
+## Post Method 관련 참고 사항
+
+
