@@ -12,6 +12,8 @@
 .container > .wrap aside ul li a{display:block; padding:10px 10px;}
 .container > .wrap aside + main{width:calc(100% - 150px); padding:0 0 0 20px;}
 
+.mypage-container{max-width: 1200px; align-content: center;}
+
 /* 게시판 - 테이블 */
 .board-normal{width:100%; table-layout: fixed;}
 .board-normal tr > *{width:auto}
@@ -85,7 +87,10 @@
 .btn-basic a{display:block; background:#222; color:#fff; font-size:20px; line-height:50px; padding:0 20px; min-width:120px;}
 
 @media screen and (max-width: 1200px){
-    .wrap{max-width:600px; padding:0 15px;}
+    .wrap{
+        max-width:600px; padding:0 15px;
+        display: table; margin-left: auto; margin-right: auto;
+    }
 
     .board-gallery{margin:-10px;}
     .board-gallery .gallery-cell{max-width:none; padding:10px;}
@@ -95,7 +100,7 @@
 
 p.tit{font-size:20px; font-weight:bold; margin-bottom:10px;}
 .line-box{border:1px solid #ddd; padding:20px;}
-.tbl-box{display:table; table-layout:fixed; width:100%;}
+.tbl-box{display:table; table-layout:fixed; width:100%; line-height:200%;}
 .tbl-box dl{display:table-row;}
 .tbl-box dl > *{display:table-cell;}
 .tbl-box dl dt{font-weight:500; width:100px;}

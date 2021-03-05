@@ -26,19 +26,17 @@ public class BoardController {
 
     @GetMapping("detail/{num}")
     public String detail(@PathVariable("num") Long prod_id, HttpServletRequest request, Model model){
-        String user_id = request.getRemoteUser();
-        UserResponseDto user = null;
-        if (user_id != null) {
-            Long id = Long.parseLong(user_id);
-            user = userService.findById(id);
-            model.addAttribute("user", userService.findById(id));
-        }
         Optional<Product> prod = productService.findById(prod_id);
         model.addAttribute("prod", prod);
 
+        String user_id = request.getRemoteUser();
         boolean isOwner = false;
-        if(user != null) {
-            if (prod.get().getUser().getUserId() == Integer.parseInt(user_id)) {
+
+        if (user_id != null) {
+            Long id = Long.parseLong(user_id);
+            UserResponseDto user = userService.findById(id);
+            model.addAttribute("user", user);
+            if (prod.get().getUser().getUserId() == id) {
                 isOwner = true;
             }
         }
