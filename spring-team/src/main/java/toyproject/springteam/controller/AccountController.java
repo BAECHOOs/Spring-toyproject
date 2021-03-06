@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import toyproject.springteam.domain.User;
+import toyproject.springteam.service.LikeService;
 import toyproject.springteam.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +22,9 @@ public class AccountController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private LikeService likeService;
 
     @GetMapping("/login")
     public String login(){
@@ -52,5 +56,13 @@ public class AccountController {
     public String join(User user) {
         userService.save(user);
         return "redirect:/";
+    }
+
+    @GetMapping("/mypage")
+    public String myPage(HttpServletRequest request, Model model) {
+        Long id = Long.parseLong(request.getRemoteUser());
+        model.addAttribute("user", userService.findById(id));
+        model.addAttribute("likedProducts", likeService.getLikedProducts(id));
+        return "account/mypage";
     }
 }

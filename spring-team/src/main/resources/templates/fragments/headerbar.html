@@ -7,7 +7,9 @@
                 <a th:href="@{/}"><img class="logo" src="/img/logo1.PNG" alt="우리로고"  ></a>
                 <ul class="quick">
                     <li th:if="${user!=null}">
-                        <strong><a th:text="${user.getNickname()}"></a></strong><a>님</a>
+                        <a th:href="@{/account/mypage}">
+                            <strong><span th:text="${user.getNickname()}"></span></strong><a>님</a>
+                        </a>
                     </li>
                     <li th:if="${user==null}">
                         <a href="#" th:href="@{/account/login}">로그인</a>
