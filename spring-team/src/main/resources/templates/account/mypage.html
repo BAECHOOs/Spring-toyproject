@@ -37,7 +37,6 @@
 
                 <ul class="product_list">
                     <li th:each="product : ${likedProducts}" class="card">
-                        <!--                <a th:href="@{/board/detail/${product.productId}}">-->
                         <a th:href="@{/board/detail/{id}(id=${product.productId})}">
                             <div class="product_img_container">
                                 <img th:src="${product.pictureUrl}" class="product_img" alt="제품 사진" >
@@ -63,6 +62,33 @@
                 </ul>
             <div class="box-cell">
                 <p class="tit">구매 신청한 물건</p>
+
+                <ul class="product_list">
+                    <li th:each="product : ${orderedProducts}" class="card">
+                        <a th:href="@{/board/detail/{id}(id=${product.productId})}">
+                            <div class="product_img_container">
+                                <img th:src="${product.pictureUrl}" class="product_img" alt="제품 사진" >
+                            </div>
+                            <div class="card_container">
+                                <p th:text="${product.title}" class="product_title">제품 이름입니다</p>
+                                <p th:text="|${product.price}원|" class="product_cost"><b>제품 가격입니다.</b></p>
+                                <ul>
+                                    <li>
+                                        <p th:text="${product.uploadDate}" class="product_upload_time">올린 시간 입니다.</p>
+                                        <br>
+                                    </li>
+                                    <li>
+                            <span class="product_counts">
+                                <span class="icon-eye"/><span th:text="${product.viewCount}"> 조회수</span>
+                                <span class="icon-heart"/><span th:text="${product.likeCount}"> 좋아요 수</span>
+                            </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
 
             </div>
 
