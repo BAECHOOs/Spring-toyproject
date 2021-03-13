@@ -15,7 +15,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-//@Transactional
 public class ProductService {
     private final ProductRepository productRepository;
 
@@ -27,6 +26,13 @@ public class ProductService {
     @Transactional
     public Long saveProduct(ProductSaveRequestDto requestDto) {
         return productRepository.save(requestDto.toEntity()).getProductId();
+    }
+
+    @Transactional
+    public Long findProctId() {
+        if (productRepository.findMaxProductId() == null)
+            return 1L;
+        return productRepository.findMaxProductId()+1L;
     }
 
     @Transactional(readOnly = true)

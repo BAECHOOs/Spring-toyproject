@@ -39,6 +39,9 @@ public class ProductController {
             Long id = Long.parseLong(user_id);
             model.addAttribute("user", userService.findById(id));
         }
+        else {
+            return "/account/login";
+        }
         return "products/new";
     }
 
@@ -50,8 +53,16 @@ public class ProductController {
             Long id = Long.parseLong(user_id);
             model.addAttribute("user", userService.findById(id));
         }
-        s3PresignedURL.downloadS3("", multipartFile);
-        requestDto.setPictureUrl("https://");
+        else {
+            return "/account/login";
+        }
+
+        // S3 디렉토리 구성: 사용자 아이디/물건 아이디/이미지 아이디
+        // 이미지는 판매글 당 1개만 업로드 가능 -> 아이디: 1
+        String objectKey = user_id+"/"+productService.findProctId()+"/1.jpg";
+        String s3Url = s3PresignedURL.downloadS3(objectKey, multipartFile);
+        System.out.println(objectKey+", "+s3Url);
+        requestDto.setPictureUrl(s3Url);
         productService.saveProduct(requestDto);
         return "redirect:/"; //home 화면으로 이동
     }

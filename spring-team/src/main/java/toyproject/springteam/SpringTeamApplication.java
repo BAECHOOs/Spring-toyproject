@@ -6,7 +6,7 @@ import org.springframework.cloud.aws.autoconfigure.context.ContextRegionProvider
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @EnableJpaAuditing
-@SpringBootApplication(exclude = ContextRegionProviderAutoConfiguration.class)
+@SpringBootApplication
 public class SpringTeamApplication {
 
 	public static void main(String[] args) {

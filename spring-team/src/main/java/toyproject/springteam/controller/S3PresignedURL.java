@@ -37,7 +37,7 @@ import java.util.*;
 public class S3PresignedURL {
 
     @Value("${cloud.aws.s3.bucket}")
-    private String bucket;
+    private String bucketName;
 
     @Value("${cloud.aws.region.static}")
     private String region;
@@ -48,7 +48,8 @@ public class S3PresignedURL {
     @Value("${cloud.aws.credentials.secretKey}")
     private String secretKey;
 
-    public void downloadS3(String directory, MultipartFile multipartFile) throws IOException, IllegalStateException {
+    public String downloadS3(String objectKey, MultipartFile multipartFile) throws IOException, IllegalStateException {
+        URL s3Url = null;
 
         ClientConfiguration clientConfig = new ClientConfiguration();
         clientConfig.setProtocol(Protocol.HTTP);
@@ -67,7 +68,7 @@ public class S3PresignedURL {
             expTimeMillis += 1000 * 60 * 60;
             expiration.setTime(expTimeMillis);
 
-            GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest(bucket, "blue.jpg");
+            GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest(bucketName, objectKey);
             generatePresignedUrlRequest.setMethod(HttpMethod.PUT);
             generatePresignedUrlRequest.setExpiration(expiration);
             generatePresignedUrlRequest.setContentType("image/jpeg");
@@ -117,14 +118,15 @@ public class S3PresignedURL {
             connection.getResponseCode();
             System.out.println("HTTP response code: " + connection.getResponseCode());
 
-            S3Object object = s3Client.getObject(bucket, "blue.jpg");
+            S3Object object = s3Client.getObject(bucketName, objectKey);
             System.out.println("Object " + object.getKey() + " created in bucket " + object.getBucketName());
 
+            s3Url = s3Client.getUrl(bucketName, objectKey);
         } catch (AmazonServiceException e) {
             e.printStackTrace();
         } catch (SdkClientException e) {
             e.printStackTrace();
         }
-
+        return s3Url.toExternalForm();
     }
 }

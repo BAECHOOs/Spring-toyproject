@@ -14,4 +14,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findRecentProducts();
 
     Optional<Product> findById(Long id);
+
+    @Query("SELECT MAX(productId) FROM Product")
+    Long findMaxProductId();
 }
