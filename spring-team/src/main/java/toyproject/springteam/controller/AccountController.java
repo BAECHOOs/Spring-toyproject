@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import toyproject.springteam.domain.User;
 import toyproject.springteam.service.LikeService;
+import toyproject.springteam.service.OrderService;
 import toyproject.springteam.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +26,9 @@ public class AccountController {
 
     @Autowired
     private LikeService likeService;
+
+    @Autowired
+    private OrderService orderService;
 
     @GetMapping("/login")
     public String login(){
@@ -63,6 +67,7 @@ public class AccountController {
         Long id = Long.parseLong(request.getRemoteUser());
         model.addAttribute("user", userService.findById(id));
         model.addAttribute("likedProducts", likeService.getLikedProducts(id));
+        model.addAttribute("orderedProducts", orderService.getOrderedProducts(id));
         return "account/mypage";
     }
 }
