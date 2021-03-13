@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/home.css" />
+<link rel="stylesheet" href="/css/product_list.css" />
+<link rel="stylesheet" href="/css/fontello-embedded.css" />
 <head th:replace="fragments/header :: header" />
 <body>
     <div th:replace="fragments/headerbar :: headerbar" />
@@ -24,7 +27,18 @@
                     <div class="card_container">
                         <p th:text="${product.title}" class="product_title">제품 이름입니다</p>
                         <p th:text="|${product.price}원|" class="product_cost"><b>제품 가격입니다.</b></p>
-                        <p th:text="${product.uploadDate}" class="product_upload_time">올린 시간 입니다.</p>
+                        <ul>
+                            <li>
+                                <p th:text="${product.uploadDate}" class="product_upload_time">올린 시간 입니다.</p>
+                                <br>
+                            </li>
+                            <li>
+                                <span class="product_counts">
+                                    <span class="icon-eye"/><span th:text="${product.viewCount}"> 조회수</span>
+                                    <span class="icon-heart"/><span th:text="${product.likeCount}"> 좋아요 수</span>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                 </a>
             </li>
@@ -44,7 +58,17 @@
                     <div class="card_container">
                         <p class="product_title">아이패드 ddOOOOOAXXX0dfdOOOOOAXXX0dfdOOOOOAXXX0dfdfdfdfdfdfdf18 제품 팝니다 프로예요 SSS급 보장</p>
                         <p class="product_cost"><b>530,000원</b></p>
-                        <p class="product_upload_time">5분 전</p>
+                        <ul>
+                            <li>
+                                <p class="product_upload_time"> 5분 전</p>
+                            </li>
+                            <li>
+                                <span class="product_counts">
+                                    <span class="icon-eye"/><span> 77</span>
+                                    <span class="icon-heart"/><span> 12</span>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                 </li>
             </a>
@@ -75,7 +99,5 @@
         </ul>
     </main>
     <div th:replace="fragments/footer :: footer" />
-    <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="/css/product_list.css" />
 </body>
 </html>
