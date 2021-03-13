@@ -1,9 +1,6 @@
 package toyproject.springteam.domain;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
 
@@ -13,6 +10,7 @@ import java.util.List;
 
 
 @Data
+@NoArgsConstructor
 @Entity
 @Table(schema = "baechoo", name = "User")
 @DynamicInsert
