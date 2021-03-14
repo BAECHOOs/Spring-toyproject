@@ -36,4 +36,10 @@ public class UserService {
                 .orElseThrow(()-> new IllegalArgumentException("해당 사용자가 없습니다."));
         return new UserResponseDto(entity);
     }
+
+    @Transactional
+    public User findUserById(Long userId) {
+        User user = userRepository.findById(userId).orElseThrow(()-> new IllegalArgumentException("해당 사용자가 없습니다."));
+        return user;
+    }
 }

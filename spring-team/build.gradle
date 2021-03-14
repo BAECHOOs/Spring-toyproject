@@ -22,11 +22,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	// lombok for getter, setter
+	compileOnly('org.projectlombok:lombok:1.18.16')
+	testCompileOnly("org.projectlombok:lombok:1.18.16")
+	annotationProcessor('org.projectlombok:lombok:1.18.16')
+	testAnnotationProcessor('org.projectlombok:lombok:1.18.16')
 	implementation 'org.projectlombok:lombok'
 	implementation 'junit:junit:4.12'
-	annotationProcessor 'org.projectlombok:lombok'
-	compileOnly 'org.projectlombok:lombok'
-	testAnnotationProcessor('org.projectlombok:lombok')
+	//compileOnly 'org.projectlombok:lombok'
+	testImplementation 'org.projectlombok:lombok'
+
 	// jpa
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -38,6 +42,11 @@ dependencies {
 	// for live reload during development
 	compile("org.springframework.boot:spring-boot-devtools")
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// AWS s3
+	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-aws
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-aws', version: '2.2.1.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-aws-context', version: '1.2.1.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-aws-autoconfigure', version: '1.2.1.RELEASE'
 }
 
 test {

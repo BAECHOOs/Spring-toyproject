@@ -14,21 +14,25 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@RequiredArgsConstructor
 @Service
-//@Transactional
 public class ProductService {
-    @Autowired
     private final ProductRepository productRepository;
 
-
-    /*public ProductService(ProductRepository productRepository) {
+    @Autowired
+    public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
-    }*/
+    }
 
     @Transactional
     public Long saveProduct(ProductSaveRequestDto requestDto) {
         return productRepository.save(requestDto.toEntity()).getProductId();
+    }
+
+    @Transactional
+    public Long findProctId() {
+        if (productRepository.findMaxProductId() == null)
+            return 1L;
+        return productRepository.findMaxProductId()+1L;
     }
 
     @Transactional(readOnly = true)
