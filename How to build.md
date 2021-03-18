@@ -26,13 +26,13 @@ $ vi configure.properties
 
 ```properties
 # configure.properties
-spring.datasource.url			= jdbc:mysql://localhost:3306/baechoo?autoReconnect=true&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Seoul
-spring.datasource.username		= USERNAME
-spring.datasource.password		= PASSWORD
+spring.datasource.url = jdbc:mysql://localhost:3306/baechoo?autoReconnect=true&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Seoul
+spring.datasource.username = USERNAME
+spring.datasource.password = PASSWORD
 cloud.aws.credentials.accessKey = ACCESS_KEY
 cloud.aws.credentials.secretKey = SECRET_KEY
-cloud.aws.s3.bucket				= BUCKET_NAME
-cloud.aws.region.static			= ap-northeast-2
+cloud.aws.s3.bucket = BUCKET_NAME
+cloud.aws.region.static = ap-northeast-2
 ```
 
 <br>
@@ -52,6 +52,6 @@ $ ./gradle test
 $ cd spring-team
 $ ./gradle build
 $ build/libs
-$ java -jar Spring-toyproject-0.0.1-SNAPSHOT.jar
+$ java -jar spring-team-0.0.1-SNAPSHOT.jar
 ```
 
