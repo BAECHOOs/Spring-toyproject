@@ -23,7 +23,7 @@
 
 ## 📆 프로젝트 기간
 
-2021.01.25. ~ 2021.02.26 (33일)
+2021.01.25. ~ 2021.03.18
 
 | 기간                | 설명                                                         |
 | ------------------- | ------------------------------------------------------------ |
@@ -51,6 +51,7 @@
 
 ## 🛠 아키텍처
 
+![image](https://user-images.githubusercontent.com/41130448/111635006-680b8c00-883a-11eb-96a4-e04d483def5e.png)
 
 
 
@@ -117,31 +118,31 @@
 
 ## 🔖 노하우 공유
 
-[[DB] IntelliJ DB Navigator에서 DB 작업하기](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[DB] IntelliJ DB Navigator에서 DB 작업하기.md)
+[[DB] IntelliJ DB Navigator에서 DB 작업하기](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BDB%5D%20IntelliJ%20DB%20Navigator%EC%97%90%EC%84%9C%20DB%20%EC%9E%91%EC%97%85%ED%95%98%EA%B8%B0.md)
 
-[[DB] MYSQL DB 구축 및 Spring with Gradle과 연동](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[DB] MYSQL DB 구축 및 Spring with Gradle과 연동.md)
+[[DB] MYSQL DB 구축 및 Spring with Gradle과 연동](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BDB%5D%20MYSQL%20DB%20%EA%B5%AC%EC%B6%95%20%EB%B0%8F%20Spring%20with%20Gradle%EA%B3%BC%20%EC%97%B0%EB%8F%99.md)
 
-[[DB] MySQL 참고 사항](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[DB] MySQL 참고 사항.md)
+[[DB] MySQL 참고 사항](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BDB%5D%20MySQL%20%EC%B0%B8%EA%B3%A0%20%EC%82%AC%ED%95%AD.md)
 
-[[DB] 스키마 구조 정보](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[DB] 스키마 구조 정보.md)
+[[DB] 스키마 구조 정보](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BDB%5D%20%EC%8A%A4%ED%82%A4%EB%A7%88%20%EA%B5%AC%EC%A1%B0%20%EC%A0%95%EB%B3%B4.md)
 
-[[Git] Git project](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[Git] Git project.md)
+[[Git] Git project](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BGit%5D%20Git%20project.md)
 
-[[Git] Github for collaboration](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[Git] Github for collaboration.md)
+[[Git] Github for collaboration](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BGit%5D%20Github%20for%20collaboration.md)
 
-[[Spring] DAO와 DTO](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[Spring] DAO와 DTO.md)
+[[Spring] DAO와 DTO](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BSpring%5D%20DAO%EC%99%80%20DTO.md)
 
-[[Spring] Spring Data JPA 정리](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[Spring] Spring Data JPA 정리.md)
+[[Spring] Spring Data JPA 정리](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BSpring%5D%20Spring%20Data%20JPA%20%EC%A0%95%EB%A6%AC.md)
 
-[[Spring] Spring Security](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[Spring] Spring Security.md)
+[[Spring] Spring Security](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BSpring%5D%20Spring%20Security.md)
 
 [[Spring] Springboot build and deploy tools](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BSpring%5D%20Springboot%20build%20and%20deploy%20tools.md)
 
-[[Spring] Thymeleaf정리](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[Spring] Thymeleaf정리.md)
+[[Spring] Thymeleaf정리](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BSpring%5D%20Thymeleaf%EC%A0%95%EB%A6%AC.md)
 
-[[Spring] 도메인 클래스 관련 참고사항(1)](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[Spring] 도메인 클래스 관련 참고사항(1).md)
+[[Spring] 도메인 클래스 관련 참고사항(1)](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BSpring%5D%20%EB%8F%84%EB%A9%94%EC%9D%B8%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EA%B4%80%EB%A0%A8%20%EC%B0%B8%EA%B3%A0%EC%82%AC%ED%95%AD(1).md)
 
-[[Spring] 도메인 클래스 관련 참고사항(2)](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share knowhow/[Spring] 도메인 클래스 관련 참고사항(2).md)
+[[Spring] 도메인 클래스 관련 참고사항(2)](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BSpring%5D%20%EB%8F%84%EB%A9%94%EC%9D%B8%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EA%B4%80%EB%A0%A8%20%EC%B0%B8%EA%B3%A0%EC%82%AC%ED%95%AD(2).md)
 
 [[Spring] 서버 재시작하지 않고 view 변경 확인하기](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BSpring%5D%20%EC%84%9C%EB%B2%84%20%EC%9E%AC%EC%8B%9C%EC%9E%91%ED%95%98%EC%A7%80%20%EC%95%8A%EA%B3%A0%20view%20%EB%B3%80%EA%B2%BD%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0.md)
 
