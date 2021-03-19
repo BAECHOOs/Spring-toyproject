@@ -8,8 +8,6 @@
    <img src="https://user-images.githubusercontent.com/41130448/105579921-b8cbaf00-5dcc-11eb-8655-2f09bf64ede9.png" width="40%"></img>
 </div>
 
-
-
 <br><br>
 
 ## 🙋‍♂️ Spring을 함께 공부하고자 모인 사람들
@@ -53,18 +51,11 @@
 
 ![image](https://user-images.githubusercontent.com/41130448/111637968-3d6f0280-883d-11eb-82eb-aa2f4e7ac06d.png)
 
-
-
-
-
-
 <br><br>
 
 ## 💾 DB 스키마 구성
 
 ![image](https://user-images.githubusercontent.com/41130448/111624650-4ce74f00-882f-11eb-9be7-f5024abbd4da.png)
-
-
 
 <br><br>
 
@@ -106,14 +97,12 @@
 - [x] 좋아요 내역, 판매/구매 내역
 - [x] 내 정보 보기
 
-
-
 <br><br>
 
 ## 🥁 실행 방법
 [클릭](https://github.com/BAECHOOs/Spring-toyproject/blob/main/How%20to%20build.md)
 
-
+<br><br>
 
 ## 🔖 노하우 공유
 
