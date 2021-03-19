@@ -8,8 +8,6 @@
    <img src="https://user-images.githubusercontent.com/41130448/105579921-b8cbaf00-5dcc-11eb-8655-2f09bf64ede9.png" width="40%"></img>
 </div>
 
-
-
 <br><br>
 
 ## 🙋‍♂️ Spring을 함께 공부하고자 모인 사람들
@@ -31,7 +29,7 @@
 | 1.25(월) ~ 1.30(토) | 준비 기간                                                    |
 | 1.31(일) ~ 2.03(수) | 메인화면 프론트 구성<br />security/database 팀 분담<br />DB 스키마 구성<br />메인화면 레이아웃 구성 |
 | 2.04(목) ~ 2.15(월) | 페이지 역할 분담<br />Spring security로 회원가입, 로그인 구현<br />API 스펙 구성하기<br />DB 스키마 최종 완료<br />홈페이지 디자인 및 상품 리스트 |
-| 2.16(화) ~ 2.25(목) | Entity 클래스 설계 및 JPA로 연관관계 설정<br />마이페이지 제작 - |
+| 2.16(화) ~ 2.25(목) | Entity 클래스 설계 및 JPA로 연관관계 설정<br />마이페이지 제작 |
 | 2.26(금) ~ 3.01(월) | 판매 글쓰기: Post API 제작                                   |
 | 3.02(화) ~ 3.18(목) | 판매 글쓰기: AWS S3에 이미지 저장 기능 구현                  |
 
@@ -53,18 +51,11 @@
 
 ![image](https://user-images.githubusercontent.com/41130448/111637968-3d6f0280-883d-11eb-82eb-aa2f4e7ac06d.png)
 
-
-
-
-
-
 <br><br>
 
 ## 💾 DB 스키마 구성
 
 ![image](https://user-images.githubusercontent.com/41130448/111624650-4ce74f00-882f-11eb-9be7-f5024abbd4da.png)
-
-
 
 <br><br>
 
@@ -106,13 +97,12 @@
 - [x] 좋아요 내역, 판매/구매 내역
 - [x] 내 정보 보기
 
-
-
 <br><br>
 
+## 🥁 실행 방법
+[클릭](https://github.com/BAECHOOs/Spring-toyproject/blob/main/How%20to%20build.md)
 
-
-
+<br><br>
 
 ## 🔖 노하우 공유
 
