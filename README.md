@@ -112,8 +112,6 @@
 
 [[DB] MySQL 참고 사항](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BDB%5D%20MySQL%20%EC%B0%B8%EA%B3%A0%20%EC%82%AC%ED%95%AD.md)
 
-[[DB] 스키마 구조 정보](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BDB%5D%20%EC%8A%A4%ED%82%A4%EB%A7%88%20%EA%B5%AC%EC%A1%B0%20%EC%A0%95%EB%B3%B4.md)
-
 [[Git] Git project](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BGit%5D%20Git%20project.md)
 
 [[Git] Github for collaboration](https://github.com/BAECHOOs/Spring-toyproject/blob/main/share%20knowhow/%5BGit%5D%20Github%20for%20collaboration.md)
